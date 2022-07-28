@@ -1,0 +1,13 @@
+.single-portfolio-item .portfolio-item-img {
+    position: relative;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    /* border: inherit; */
+    border-radius: inherit;
+    border-radius: 10px;
+    margin: auto;
+}
+.nav-link span{
+    padding: 5px 10px;
+}
