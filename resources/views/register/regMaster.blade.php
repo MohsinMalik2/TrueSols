@@ -28,7 +28,7 @@
         <meta name="author" content="ThemeTags">
 
         <!--favicon icon-->
-        <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="16x16">
+        <link rel="icon" href="{{asset('assets/img/favicon.png')}}" type="image/png" sizes="16x16">
 
         <!--title-->
         <title>Buggbear - Art of Creation</title>
@@ -37,11 +37,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
 
         <!--build:css-->
-        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
         <!-- endbuild -->
 
         <!--custom css start-->
-        <link rel="stylesheet" href="assets/css/custom.css">
+        <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
         <!--custom css end-->
 
     </head>
@@ -49,7 +49,7 @@
         <!--preloader start-->
         <div id="preloader">
             <div class="preloader-wrap">
-                <img src="assets/img/favicon.png" alt="logo" class="img-fluid preloader-icon" />
+                <img src="{{asset('assets/img/favicon.png')}}" alt="logo" class="img-fluid preloader-icon" />
                 <div class="loading-bar"></div>
             </div>
         </div>
