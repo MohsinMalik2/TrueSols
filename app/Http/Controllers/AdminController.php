@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use Laravel\Ui\Presets\React;
 
 class AdminController extends Controller
 {
@@ -24,6 +26,18 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.home');
+    }
+
+    public function portfolio()
+    {
+        return view('admin.portfolio');
+    }
+
+    public function portfolio_form(Request $request){
+
+        Portfolio::create($request->all());
+        return redirect()->route('admin.portfolio');
+
     }
    
 }
