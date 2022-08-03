@@ -40,5 +40,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/home', [AdminController::class, 'index'])->name('home');
         Route::get('/portfolio', [AdminController::class, 'portfolio'])->name('portfolio');
         Route::post('/portfolio-form', [AdminController::class, 'portfolio_form'])->name('portfolio-form');
+
+        Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
+        Route::get('/blog-new', [AdminController::class, 'blog_new'])->name('blog-new');
+
+        Route::post('/blog-form', [AdminController::class, 'blog_form'])->name('blog-form');
+
     });
 });
