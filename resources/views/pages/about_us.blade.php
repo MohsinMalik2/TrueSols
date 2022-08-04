@@ -2,7 +2,7 @@
 
 @section('content')
  <!--about header section start-->
- <section class="about-header-section ptb-120 position-relative overflow-hidden bg-dark" style="background: url('assets/img/page-header-bg.svg')no-repeat center right">
+        <section class="about-header-section ptb-120 position-relative overflow-hidden bg-dark" style="background: url('assets/img/page-header-bg.svg')no-repeat center right">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -466,7 +466,7 @@
         <!--testimonial section end-->
 
         <!--our location address start-->
-        <section class="office-address-section ptb-120">
+        <!-- <section class="office-address-section ptb-120">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12">
@@ -533,11 +533,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--our location address end-->
 
         <!--cat subscribe start-->
-        <section class="cta-subscribe bg-dark ptb-120 position-relative overflow-hidden">
+        <!-- <section class="cta-subscribe bg-dark ptb-120 position-relative overflow-hidden">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
@@ -574,6 +574,6 @@
                 <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
                 <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
             </div>
-        </section>
+        </section> -->
         <!--cat subscribe end-->
 @endsection

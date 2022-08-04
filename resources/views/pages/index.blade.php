@@ -53,7 +53,7 @@
                             <h4 class="text-primary h5 mb-3">Why Choose Us</h4>
                             <h2 class="mb-4">
                                 We are working with <br />
-                                5+ years of exprience
+                                3+ years of exprience
                             </h2>
                             <p>
                                 We work for the creation of the perfect mixture of elegance 
@@ -241,7 +241,7 @@
                         <div class="section-heading text-center">
                             <h2>Our Portfolio</h2>
                             <p>
-                                We’ve been building unique digital products, platforms, and experiences for the past 6 years.
+                                We’ve been building unique digital products, platforms, and experiences for the past 4 years.
                             </p>
                         </div>
                     </div>
@@ -794,8 +794,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7 col-md-10">
                         <div class="section-heading text-center">
-                            <h2>Over 500+ Companies Trusted Us</h2>
-                            <p>Over 500+ Companies Trusted Us</p>
+                            <h2>Companies Trusted Us</h2>
+                            <p>It's not about the quantity but about the quality of work.</p>
                         </div>
                     </div>
                 </div>
@@ -947,7 +947,7 @@
         <!-- Testimonial end -->
 
         <!--cat subscribe start-->
-        <section class="cta-subscribe bg-dark text-white ptb-120 position-relative overflow-hidden">
+        <!-- <section class="cta-subscribe bg-dark text-white ptb-120 position-relative overflow-hidden">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
@@ -981,11 +981,11 @@
                 <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
                 <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
             </div>
-        </section>
+        </section> -->
         <!--cat subscribe end-->
 
         <!--blog section start-->
-        <section class="home-blog-section ptb-120 ">
+        <!-- <section class="home-blog-section ptb-120 ">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12">
@@ -1091,6 +1091,6 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!--blog section end-->
 @endsection

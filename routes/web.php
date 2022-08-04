@@ -38,5 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
     
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::get('/home', [AdminController::class, 'index'])->name('home');
+        Route::get('/portfolio', [AdminController::class, 'portfolio'])->name('portfolio');
+        Route::get('/blogs', [AdminController::class, 'blogs'])->name('blogs');
+        Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
     });
 });

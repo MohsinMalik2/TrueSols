@@ -25,5 +25,20 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+
+    public function portfolio()
+    {
+        return view('admin.portfolio');
+    }
+
+    public function blogs()
+    {
+        return view('admin.blogs');
+    }
+
+    public function settings()
+    {
+        return view('admin.settings');
+    }
    
 }

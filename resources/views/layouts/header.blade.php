@@ -24,12 +24,12 @@
                           </li>
                           <li><a href="{{ route('services') }}" class="nav-link">Services</a></li>
 
-                          <li><a href="{{route('blogs')}}" class="nav-link">Blogs</a></li>
+                          <!-- <li><a href="{{route('blogs')}}" class="nav-link">Blogs</a></li> -->
 
                           <li><a href="{{route('about-us')}}" class="nav-link">About Us</a></li>
 
                           <li><a href="{{route('contact-us')}}" class="nav-link">Contact Us</a></li>
-                          @guest
+                          <!-- @guest
                             @if (Route::has('login'))
                                 <li>
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -57,7 +57,7 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest -->
                       </ul>
                   </div>
 
