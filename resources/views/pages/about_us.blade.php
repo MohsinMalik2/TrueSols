@@ -183,7 +183,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-single-wrap mb-5">
                             <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-1.jpg')}}" alt="team" class="img-fluid position-relative">
+                                <img src="{{asset('assets/img/team/Mohsin.jpg')}}" alt="team" class="img-fluid position-relative">
                                 <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -192,15 +192,15 @@
                                 </ul>
                             </div>
                             <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
+                                <h5 class="h6 mb-1">Mohsin Nawaz</h5>
+                                <p class="text-muted small mb-0">Founder | CEO | Software Engineer</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-single-wrap mb-5">
                             <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-2.jpg')}}" alt="team" class="img-fluid position-relative">
+                                <img src="{{asset('assets/img/team/aliButt.jpg')}}" alt="team" class="img-fluid position-relative">
                                 <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -209,15 +209,15 @@
                                 </ul>
                             </div>
                             <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
+                                <h5 class="h6 mb-1">Muhammad Ali Butt</h5>
+                                <p class="text-muted small mb-0">Project Manager | Co-Founder </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-single-wrap mb-5">
                             <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-3.jpg')}}" alt="team" class="img-fluid position-relative">
+                                <img src="{{asset('assets/img/team/sarmad.jpg')}}" alt="team" class="img-fluid position-relative">
                                 <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -226,15 +226,15 @@
                                 </ul>
                             </div>
                             <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
+                                <h5 class="h6 mb-1">Sarmad Iqbal</h5>
+                                <p class="text-muted small mb-0">Sr. Quality Assurance (Manual & Automate)</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-single-wrap mb-5">
                             <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-4.jpg')}}" alt="team" class="img-fluid position-relative">
+                                <img src="{{asset('assets/img/team/hamza.jpg')}}" alt="team" class="img-fluid position-relative">
                                 <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -243,15 +243,15 @@
                                 </ul>
                             </div>
                             <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
+                                <h5 class="h6 mb-1">Muhammad Hamza</h5>
+                                <p class="text-muted small mb-0">Full Stack Developer | Wordpress Developer</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-single-wrap mb-5">
                             <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-5.jpg')}}" alt="team" class="img-fluid position-relative">
+                                <img src="{{asset('assets/img/team/hammas.jpg')}}" alt="team" class="img-fluid position-relative">
                                 <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -260,15 +260,15 @@
                                 </ul>
                             </div>
                             <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
+                                <h5 class="h6 mb-1">Muhammad Hammas Javed</h5>
+                                <p class="text-muted small mb-0">Co-founder | Backend Developer</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-single-wrap mb-5">
                             <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-6.jpg')}}" alt="team" class="img-fluid position-relative">
+                                <img src="{{asset('assets/img/team/aizaz.jpg')}}" alt="team" class="img-fluid position-relative">
                                 <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -277,42 +277,8 @@
                                 </ul>
                             </div>
                             <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-7.jpg')}}" alt="team" class="img-fluid position-relative">
-                                <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-custom">
-                                <img src="{{asset('assets/img/team/team-8.jpg')}}" alt="team" class="img-fluid position-relative">
-                                <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="h6 mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
+                                <h5 class="h6 mb-1">Syed Aizaz Hassan</h5>
+                                <p class="text-muted small mb-0">Sr. Backend Developer | CRM Expert</p>
                             </div>
                         </div>
                     </div>

@@ -21,8 +21,9 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    
-    
+
+
+    <script src="{{asset('app-assets/js/scripts/pages/helper-functions.js')}}"></script>
     <!-- END: Page JS-->
 
     <script>

@@ -112,8 +112,7 @@
                 <div class="section-heading text-center">
                     <h4 class="h5 text-primary">Testimonial</h4>
                     <h2>What They Say About Us</h2>
-                    <p>Dynamically initiate market positioning total linkage with clicks-and-mortar technology
-                        compelling data for cutting-edge markets.</p>
+                    <p>We are what our clients describe. Client's satisfaction is our first priority, right suggestions come next.</p>
                 </div>
             </div>
         </div>
@@ -127,14 +126,14 @@
                                 <div class="d-flex mb-32 align-items-center">
                                     <img src="assets/img/testimonial/1.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                     <div class="author-info">
-                                        <h6 class="mb-0">Mr.Rupan Oberoi</h6>
-                                        <small>Founder and CEO at Amaara Herbs</small>
+                                        <h6 class="mb-0">Muhammad Kashif</h6>
+                                        <small>Reg. Manager Mylive-Tech Pakistan</small>
                                     </div>
                                 </div>
                                 <blockquote>
-                                    <h6>The Best Template You Got to Have it!</h6>
-                                    Globally network long-term high-impact schemas vis-a-vis distinctive e-commerce
-                                    cross-media infrastructures rather than ethical
+                                    <h6>The Best Team One Can Hire Remotely!</h6>
+                                    Remote work is kinda challenging but the team with right knowledge and collaboration skills,
+                                    ace in that field. 100% recommended.
                                 </blockquote>
                                 <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                     <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -150,14 +149,15 @@
                                 <div class="d-flex mb-32 align-items-center">
                                     <img src="assets/img/testimonial/3.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
                                     <div class="author-info">
-                                        <h6 class="mb-0">Oberoi R.</h6>
-                                        <small>CEO at Herbs</small>
+                                        <h6 class="mb-0">Muhammad Hamza</h6>
+                                        <small>IoT Research Officer, Australia</small>
                                     </div>
                                 </div>
                                 <blockquote>
-                                    <h6>Embarrassed by the First Version.</h6>
-                                    Dynamically create innovative core competencies with effective best
-                                    practices promote innovative infrastructures.
+                                    <h6>Highly Co-operative Agency.</h6>
+                                    Thank you very much for doing everything in such a short notice,
+                                    I doubted someone will be able to make it with blured specifications I had, but you did it
+                                    better than my expectations.
                                 </blockquote>
                                 <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
                                     <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
@@ -168,7 +168,7 @@
                                 </ul>
                                 <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
                             </div>
-                            <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
+                            <!-- <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
                                 <img src="assets/img/testimonial/quotes-dot.svg" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
                                 <div class="d-flex mb-32 align-items-center">
                                     <img src="assets/img/testimonial/2.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
@@ -236,7 +236,7 @@
                                     <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
                                 </ul>
                                 <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <span class="swiper-button-next"></span>
@@ -247,45 +247,4 @@
     </div>
 </section>
 <!--testimonial section end-->
-
-<!--cat subscribe start-->
-<section class="cta-subscribe bg-dark ptb-120 position-relative overflow-hidden">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-                <div class="subscribe-info-wrap text-center position-relative z-2">
-                    <div class="section-heading">
-                        <h4 class="h5 text-warning">Let's Try! Get Free Support</h4>
-                        <h2>Start Your 14-Day Free Trial</h2>
-                        <p>We can help you to create your dream website for better business revenue.</p>
-                    </div>
-                    <div class="form-block-banner mw-60 m-auto mt-5">
-                        <a href="contact-us.html" class="btn btn-primary">Contact with Us</a>
-                        <a href="http://www.youtube.com/watch?v=hAP2QF--2Dg" class="text-decoration-none popup-youtube d-inline-flex 
-                                    align-items-center watch-now-btn ms-lg-3 ms-md-3 mt-3 mt-lg-0">
-                            <i class="fas fa-play"></i> Watch Demo
-                        </a>
-                    </div>
-                    <ul class="nav justify-content-center subscribe-feature-list mt-4">
-                        <li class="nav-item">
-                            <span><i class="far fa-check-circle text-primary me-2"></i>Free 14-day trial</span>
-                        </li>
-                        <li class="nav-item">
-                            <span><i class="far fa-check-circle text-primary me-2"></i>No credit card required</span>
-                        </li>
-                        <li class="nav-item">
-                            <span><i class="far fa-check-circle text-primary me-2"></i>Support 24/7</span>
-                        </li>
-                        <li class="nav-item">
-                            <span><i class="far fa-check-circle text-primary me-2"></i>Cancel anytime</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
-        <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
-    </div>
-</section>
-<!--cat subscribe end-->
 @endsection
