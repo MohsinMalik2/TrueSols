@@ -18,7 +18,7 @@ class PortfolioCategorySeeder extends Seeder
      */
     public function run()
     {
-        $id = Auth::id();
+        $id = 1;
 
         $data = [
             [

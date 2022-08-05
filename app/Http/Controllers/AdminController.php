@@ -7,6 +7,10 @@ use App\Models\Blog;
 use Illuminate\Http\Request;
 use Laravel\Ui\Presets\React;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 class AdminController extends Controller
 {
@@ -30,22 +34,54 @@ class AdminController extends Controller
         return view('admin.home');
     }
 
+    /* Portfolio Functions */
+    
     public function portfolio()
     {
-        return view('admin.portfolio');
+        $categories = DB::table('portfolio_categories')->get();
+        $portfolioList = Portfolio::all();
+
+        return view('admin.portfolio',compact('categories','portfolioList'));
+    }
+    public function portfolio_form(Request $request){
+        if(!$request->is_active){
+            $is_active = 'off';
+        }
+        else{
+            $is_active = 'on';
+        }
+        $arr = $request->tags;
+        $tagString =  implode(",",$arr);
+
+        $fileName = '';
+        if(isset($request->thumbnail)){
+            
+            $fileName = $this->imageUpload($request);
+        }
+
+        // return $fileName;
+        Portfolio::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'tags' => $tagString,
+            'url' => $request->url,
+            'category' => $request->category,
+            'thumbnail' => $fileName,
+            'is_active' => $is_active,
+        ]);
+        
+        return redirect()->route('admin.portfolio');
+
     }
 
+    /* Portfolio Functions */
 
     public function settings()
     {
         return view('admin.settings');
     }
-    public function portfolio_form(Request $request){
-
-        Portfolio::create($request->all());
-        return redirect()->route('admin.portfolio');
-
-    }
+  
+    /* Blog Functions */
 
     public function blog()
     {
@@ -69,7 +105,6 @@ class AdminController extends Controller
             $fileName = $this->file_upload($request);
         }
            
-        
         Blog::create([
             'name' => $request->name,
             'description' => $request->description,
@@ -82,6 +117,11 @@ class AdminController extends Controller
         return redirect()->route('admin.blog');
 
     }
+
+    /* Blog Functions */
+
+
+    /*Common Funtions */
 
     public function file_upload(Request $request)
     {
@@ -101,6 +141,58 @@ class AdminController extends Controller
 
     }
 
-    
+    public function imageUpload(Request $request)
+    {
+        $request->validate([
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+   
+        $imageName = time().'.'.$request->thumbnail->extension();  
+     
+        // $request->thumbnail->move(public_path('app-assets/images/portfolio-images'), $imageName);
+        $request->thumbnail->storeAs('public/portfolio-images', $imageName);
+        
+        /* Store $imageName name in DATABASE from HERE */
+        return $imageName;
+    }
+
+    public static function saveFile(Request $request)
+    {
+        $uniqueFileName = time().'.'.$request->thumbnail->extension();
+        $filePath = THUMBNAIL_PATH . $uniqueFileName;
+        Storage::put($filePath,$request->thumbnail);
+        return $filePath;
+    }
+
+
+    function createUniqueName(){
+        return time() . uniqid(rand());
+    }
+
+     /**
+     * Function to get attachment  from storage
+     */
+    public function getFile()
+    {
+        return Storage::get($this->filename);
+    }
+
+    /**
+     * Function to get storage path of attachment
+     */
+    public function getFilePath()
+    {
+        return Storage::path($this->filename);
+    }
+
+    /**
+     * Function to destroy attachment from storage
+     */
+    public function destroyFile()
+    {
+        return Storage::delete($this->filename);
+    }
+
+    /*Common Funtions */
    
 }

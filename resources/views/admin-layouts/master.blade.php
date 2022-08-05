@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/plugins/forms/form-file-uploader.css')}}">
 
     <!-- END: Page CSS-->
-
+    @yield('styles')
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/style.css')}}">

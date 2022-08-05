@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li class="@yield('blogs_select') nav-item" data-menu="">
-                        <a class="nav-link d-flex align-items-center" href="{{route('admin.blogs')}}">
+                        <a class="nav-link d-flex align-items-center" href="{{route('admin.blog')}}">
                             <i data-feather="clipboard"></i><span data-i18n="Blogs">Blogs</span>
                         </a>
                     </li>
