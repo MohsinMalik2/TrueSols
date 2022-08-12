@@ -8,8 +8,8 @@
                         <div class="col-md-8 col-lg-4 mb-md-4 mb-lg-0">
                             <div class="footer-single-col">
                                 <div class="footer-single-col mb-4">
-                                    <img src="assets/img/logo-white.png" alt="logo" class="img-fluid logo-white" width="200">
-                                    <img src="assets/img/logo-color.png" alt="logo" class="img-fluid logo-color" width="200">
+                                    <img src="assets/img/logo-white.png" alt="logo" class="img-fluid logo-white" width="280">
+                                    <img src="assets/img/logo-color.png" alt="logo" class="img-fluid logo-color" width="280">
                                 </div>
                                 <p>Our latest news, articles, and resources, we will sent to
                                     your inbox weekly.</p>

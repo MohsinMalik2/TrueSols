@@ -7,8 +7,8 @@
           <nav class="navbar navbar-expand-xl navbar-light sticky-header">
               <div class="container d-flex align-items-center justify-content-lg-between position-relative">
                   <a href="{{route('index')}}" class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none">
-                      <img src="{{asset('assets/img/logo-white.png')}}" alt="logo" class="img-fluid logo-white" width="200" />
-                      <img src="{{asset('assets/img/logo-color.png')}}" alt="logo" class="img-fluid logo-color" width="200" />
+                      <img src="{{asset('assets/img/logo-white.png')}}" alt="logo" class="img-fluid logo-white" width="220" />
+                      <img src="{{asset('assets/img/logo-color.png')}}" alt="logo" class="img-fluid logo-color" width="220" />
                   </a>
 
                   <a class="navbar-toggler position-absolute right-0 border-0" href="#offcanvasWithBackdrop" role="button">

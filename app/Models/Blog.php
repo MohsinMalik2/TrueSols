@@ -10,11 +10,12 @@ class Blog extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'description',
+        'title',
+        'category',
+        'slug',
+        'content',
         'tags',
-        'thumbnail',
-        'attachments',
+        'thumbnail'
         // add all other fields
     ];
 

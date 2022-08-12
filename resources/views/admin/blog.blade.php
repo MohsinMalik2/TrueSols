@@ -13,7 +13,7 @@
                                 <div class="card">
                                     <div class="card-header border-bottom">
                                         <h4 class="card-title">Blogs</h4>
-                                        <button class="btn btn-primary ml-auto" data-bs-toggle="modal" data-bs-target="#blog-form-modal" onclick="initPortfolioForm()">Add New </button>
+                                        <a class="btn btn-primary ml-auto" href="{{route('admin.blog-new')}}">Add New </a>
                                     </div>
                                     <div class="card-datatable">
                                         <table class="table table-responsive">

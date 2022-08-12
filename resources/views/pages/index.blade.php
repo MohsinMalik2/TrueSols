@@ -414,26 +414,28 @@
                             </div>
                             <div class="row">
                                 @foreach($portfolioList as $portfolio)
-                                <div class="col-lg-4">
-                                    <div class="single-portfolio-item mb-30">
-                                        <div class="portfolio-item-img">
-                                            <img src="{{asset('storage/portfolio-images/'.$portfolio->thumbnail)}}" alt="portfolio photo" class="img-fluid" />
-                                            <div class="portfolio-info">
-                                                <h5>
-                                                    <a href="{{$portfolio->url}}" class="text-decoration-none text-white">{{$portfolio->name}}</a>
-                                                </h5>
-                                                <div class="categories">
-                                                    <?php
-                                                    $my_array1 = explode("," , $portfolio->tags)
-                                                    ?>
-                                                    @foreach($my_array1 as $tag)
-                                                        <span>{{$tag}}, </span>
-                                                    @endforeach
+                                    @if($portfolio->category == 1)
+                                        <div class="col-lg-4">
+                                            <div class="single-portfolio-item mb-30">
+                                                <div class="portfolio-item-img d-flex align-items-center justify-content-center">
+                                                    <img src="{{asset('storage/portfolio-images/'.$portfolio->thumbnail)}}" alt="portfolio photo" class="img-fluid" />
+                                                    <div class="portfolio-info">
+                                                        <h5>
+                                                            <a href="{{$portfolio->url}}" class="text-decoration-none text-white">{{$portfolio->name}}</a>
+                                                        </h5>
+                                                        <div class="categories">
+                                                            <?php
+                                                            $my_array1 = explode("," , $portfolio->tags)
+                                                            ?>
+                                                            @foreach($my_array1 as $tag)
+                                                                <span>{{$tag}}, </span>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    @endif
                                 @endforeach
                             </div>
                         </div>
@@ -586,6 +588,32 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                            @foreach($portfolioList as $portfolio)
+                                    @if($portfolio->category == 2)
+                                        <div class="col-lg-4">
+                                            <div class="single-portfolio-item mb-30">
+                                                <div class="portfolio-item-img d-flex align-items-center justify-content-center">
+                                                    <img src="{{asset('storage/portfolio-images/'.$portfolio->thumbnail)}}" alt="portfolio photo" class="img-fluid" />
+                                                    <div class="portfolio-info">
+                                                        <h5>
+                                                            <a href="{{$portfolio->url}}" class="text-decoration-none text-white">{{$portfolio->name}}</a>
+                                                        </h5>
+                                                        <div class="categories">
+                                                            <?php
+                                                            $my_array1 = explode("," , $portfolio->tags)
+                                                            ?>
+                                                            @foreach($my_array1 as $tag)
+                                                                <span>{{$tag}}, </span>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
                         </div>
 
                         <!-- Design -->
@@ -658,6 +686,32 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                @foreach($portfolioList as $portfolio)
+                                    @if($portfolio->category == 3)
+                                        <div class="col-lg-4">
+                                            <div class="single-portfolio-item mb-30">
+                                                <div class="portfolio-item-img d-flex align-items-center justify-content-center">
+                                                    <img src="{{asset('storage/portfolio-images/'.$portfolio->thumbnail)}}" alt="portfolio photo" class="img-fluid" />
+                                                    <div class="portfolio-info">
+                                                        <h5>
+                                                            <a href="{{$portfolio->url}}" class="text-decoration-none text-white">{{$portfolio->name}}</a>
+                                                        </h5>
+                                                        <div class="categories">
+                                                            <?php
+                                                            $my_array1 = explode("," , $portfolio->tags)
+                                                            ?>
+                                                            @foreach($my_array1 as $tag)
+                                                                <span>{{$tag}}, </span>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
                         </div>
 
@@ -799,6 +853,32 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                @foreach($portfolioList as $portfolio)
+                                    @if($portfolio->category == 4)
+                                        <div class="col-lg-4">
+                                            <div class="single-portfolio-item mb-30">
+                                                <div class="portfolio-item-img d-flex align-items-center justify-content-center">
+                                                    <img src="{{asset('storage/portfolio-images/'.$portfolio->thumbnail)}}" alt="portfolio photo" class="img-fluid" />
+                                                    <div class="portfolio-info">
+                                                        <h5>
+                                                            <a href="{{$portfolio->url}}" class="text-decoration-none text-white">{{$portfolio->name}}</a>
+                                                        </h5>
+                                                        <div class="categories">
+                                                            <?php
+                                                            $my_array1 = explode("," , $portfolio->tags)
+                                                            ?>
+                                                            @foreach($my_array1 as $tag)
+                                                                <span>{{$tag}}, </span>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
                         </div>
                     </div>

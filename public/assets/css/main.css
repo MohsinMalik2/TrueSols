@@ -7,7 +7,7 @@
  */
 /* line 7, src/assets/scss/vendors/bootstrap.min.css */
 :root {
-  --bs-blue: #0d6efd;
+  --bs-blue: #0D79BA;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -20,7 +20,7 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
-  --bs-primary: #0d6efd;
+  --bs-primary: #0D79BA;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -270,7 +270,7 @@ sup {
 
 /* line 205, src/assets/scss/vendors/bootstrap.min.css */
 a {
-  color: #0d6efd;
+  color: #0D79BA;
   text-decoration: underline;
 }
 
@@ -3070,8 +3070,8 @@ textarea.form-control-lg {
 
 /* line 2081, src/assets/scss/vendors/bootstrap.min.css */
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 2085, src/assets/scss/vendors/bootstrap.min.css */
@@ -3086,8 +3086,8 @@ textarea.form-control-lg {
 
 /* line 2091, src/assets/scss/vendors/bootstrap.min.css */
 .form-check-input[type="checkbox"]:indeterminate {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
@@ -3199,7 +3199,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #0d6efd;
+  background-color: #0D79BA;
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out,
@@ -3244,7 +3244,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #0d6efd;
+  background-color: #0D79BA;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
@@ -3817,8 +3817,8 @@ fieldset:disabled .btn {
 /* line 2583, src/assets/scss/vendors/bootstrap.min.css */
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 2588, src/assets/scss/vendors/bootstrap.min.css */
@@ -3863,8 +3863,8 @@ fieldset:disabled .btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 2622, src/assets/scss/vendors/bootstrap.min.css */
@@ -4240,15 +4240,15 @@ fieldset:disabled .btn {
 
 /* line 2895, src/assets/scss/vendors/bootstrap.min.css */
 .btn-outline-primary {
-  color: #0d6efd;
-  border-color: #0d6efd;
+  color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 2899, src/assets/scss/vendors/bootstrap.min.css */
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 2904, src/assets/scss/vendors/bootstrap.min.css */
@@ -4265,8 +4265,8 @@ fieldset:disabled .btn {
 .btn-outline-primary.dropdown-toggle.show,
 .btn-outline-primary:active {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 2917, src/assets/scss/vendors/bootstrap.min.css */
@@ -4282,7 +4282,7 @@ fieldset:disabled .btn {
 /* line 2924, src/assets/scss/vendors/bootstrap.min.css */
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-  color: #0d6efd;
+  color: #0D79BA;
   background-color: transparent;
 }
 
@@ -4625,7 +4625,7 @@ fieldset:disabled .btn {
 /* line 3167, src/assets/scss/vendors/bootstrap.min.css */
 .btn-link {
   font-weight: 400;
-  color: #0d6efd;
+  color: #0D79BA;
   text-decoration: underline;
 }
 
@@ -5020,7 +5020,7 @@ fieldset:disabled .btn {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #0d6efd;
+  background-color: #0D79BA;
 }
 
 /* line 3459, src/assets/scss/vendors/bootstrap.min.css */
@@ -5076,7 +5076,7 @@ fieldset:disabled .btn {
 .dropdown-menu-dark .dropdown-item.active,
 .dropdown-menu-dark .dropdown-item:active {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: #0D79BA;
 }
 
 /* line 3499, src/assets/scss/vendors/bootstrap.min.css */
@@ -5337,7 +5337,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: #0D79BA;
 }
 
 /* line 3670, src/assets/scss/vendors/bootstrap.min.css */
@@ -6319,7 +6319,7 @@ fieldset:disabled .btn {
 .page-link {
   position: relative;
   display: block;
-  color: #0d6efd;
+  color: #0D79BA;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -6368,8 +6368,8 @@ fieldset:disabled .btn {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 4315, src/assets/scss/vendors/bootstrap.min.css */
@@ -6627,7 +6627,7 @@ fieldset:disabled .btn {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #0d6efd;
+  background-color: #0D79BA;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }
@@ -6743,8 +6743,8 @@ fieldset:disabled .btn {
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #0D79BA;
+  border-color: #0D79BA;
 }
 
 /* line 4579, src/assets/scss/vendors/bootstrap.min.css */
@@ -8452,7 +8452,7 @@ fieldset:disabled .btn {
 
 /* line 5776, src/assets/scss/vendors/bootstrap.min.css */
 .link-primary {
-  color: #0d6efd;
+  color: #0D79BA;
 }
 
 /* line 5779, src/assets/scss/vendors/bootstrap.min.css */
@@ -8980,7 +8980,7 @@ fieldset:disabled .btn {
 
 /* line 6118, src/assets/scss/vendors/bootstrap.min.css */
 .border-primary {
-  border-color: #0d6efd !important;
+  border-color: #0D79BA !important;
 }
 
 /* line 6121, src/assets/scss/vendors/bootstrap.min.css */
@@ -10079,7 +10079,7 @@ fieldset:disabled .btn {
 
 /* line 6745, src/assets/scss/vendors/bootstrap.min.css */
 .text-primary {
-  color: #0d6efd !important;
+  color: #0D79BA !important;
 }
 
 /* line 6748, src/assets/scss/vendors/bootstrap.min.css */
@@ -10149,7 +10149,7 @@ fieldset:disabled .btn {
 
 /* line 6787, src/assets/scss/vendors/bootstrap.min.css */
 .bg-primary {
-  background-color: #0d6efd !important;
+  background-color: #0D79BA !important;
 }
 
 /* line 6790, src/assets/scss/vendors/bootstrap.min.css */
@@ -48951,7 +48951,7 @@ button.swiper-pagination-bullet {
 :root {
   --bs-primary-soft: #ceddff;
   --bs-primary-light: #3a75ff;
-  --bs-primary: #175cff;
+  --bs-primary: #0D79BA;
   --bs-primary-dark: #0048f0;
   --bs-secondary-light: #dcdcdf;
   --bs-secondary: #c0c0c5;
@@ -49555,8 +49555,8 @@ a:hover,
 
 /* line 488, src/assets/scss/custom/_style.scss */
 .bg-gradient {
-  background: -webkit-gradient(linear, left top, right top, from(#021048), to(#1e38a3)) !important;
-  background: linear-gradient(90deg, #021048, #1e38a3) !important;
+  background: -webkit-gradient(linear, left top, right top, from(#021048), to(#0D79BA)) !important;
+  background: linear-gradient(90deg, #021048, #0D79BA) !important;
 }
 
 /* line 492, src/assets/scss/custom/_style.scss */
@@ -50654,17 +50654,18 @@ select:invalid {
           justify-content: center;
   text-align: center;
   z-index: 999999;
+  background:#fff;
 }
 
 /* line 1276, src/assets/scss/custom/_style.scss */
 .preloader-icon {
-  width: 60px;
-  height: 60px;
+  width: 260px;
+  height: 260px;
 }
 
 /* line 1280, src/assets/scss/custom/_style.scss */
 .loading-bar {
-  width: 120px;
+  width: 360px;
   height: 3px;
   margin-top: 30px;
   position: relative;
@@ -50675,7 +50676,7 @@ select:invalid {
 /* line 1289, src/assets/scss/custom/_style.scss */
 .loading-bar::before {
   content: "";
-  width: 35px;
+  width: 135px;
   height: 3px;
   background: var(--bs-primary);
   position: absolute;
@@ -50686,13 +50687,13 @@ select:invalid {
 
 @-webkit-keyframes bluebar {
   50% {
-    left: 96px;
+    left: 196px;
   }
 }
 
 @keyframes bluebar {
   50% {
-    left: 96px;
+    left: 196px;
   }
 }
 
@@ -54636,7 +54637,7 @@ i {
 .bubble .bubble-1 {
   height: 160px;
   width: 160px;
-  background-color: #175cff;
+  background-color: #0D79BA;
   left: 0;
   bottom: 10%;
 }
@@ -54991,7 +54992,7 @@ i {
   width: 75px;
   line-height: 77px;
   text-align: center;
-  background-color: #175cff;
+  background-color: #0D79BA;
   color: #fff;
   border-radius: 50%;
   position: relative;
@@ -55005,7 +55006,7 @@ i {
   width: 75px;
   line-height: 77px;
   text-align: center;
-  background-color: #175cff;
+  background-color: #0D79BA;
   color: #fff;
   border-radius: 50%;
   position: relative;
@@ -55023,7 +55024,7 @@ i {
   width: 100px;
   opacity: 0;
   border-radius: 50%;
-  border: 1px solid #175cff;
+  border: 1px solid #0D79BA;
   -webkit-animation: btnWave 1500ms linear infinite;
           animation: btnWave 1500ms linear infinite;
 }
@@ -55038,7 +55039,7 @@ i {
   width: 100%;
   opacity: 0;
   border-radius: 50%;
-  border: 10px solid #175cff;
+  border: 10px solid #0D79BA;
   -webkit-animation: btnWave 1000ms linear infinite;
           animation: btnWave 1000ms linear infinite;
 }
@@ -55240,7 +55241,7 @@ i {
 
 /* line 4541, src/assets/scss/custom/_style.scss */
 .cyber-footer-social-list li a:hover {
-  background-color: #175cff;
+  background-color: #0D79BA;
 }
 
 /* line 4544, src/assets/scss/custom/_style.scss */
@@ -55787,9 +55788,9 @@ i {
   border-style: solid;
   border-color: #0082f8;
   padding: 10px 30px;
-  border: 2px solid #175cff;
+  border: 2px solid #0D79BA;
   display: inline-block;
-  background-color: #175cff;
+  background-color: #0D79BA;
   color: #fff;
   text-align: left;
 }

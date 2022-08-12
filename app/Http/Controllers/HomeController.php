@@ -27,7 +27,7 @@ class HomeController extends Controller
     
     public function index() {
         $blogList = Blog::all();
-        $portfolioList = Portfolio::all();
+        $portfolioList = Portfolio::where('is_active','on')->get();
         return view('pages.index',compact('blogList','portfolioList'));
     }
 
@@ -61,7 +61,8 @@ class HomeController extends Controller
     }
 
     public function portfolio(){
-        return view('pages.portfolio');
+        $portfolioList = Portfolio::where('is_active','on')->get();
+        return view('pages.portfolio',compact('portfolioList'));
     }
 
     public function singlePortfolio(){
