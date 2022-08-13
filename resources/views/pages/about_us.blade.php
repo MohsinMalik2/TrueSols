@@ -10,7 +10,7 @@
                             <div class="about-content-left">
                                 <div class="about-info mb-5">
                                     <h1 class="fw-bold display-5">Grow your Business & Digital Presence with
-                                        Truesols - Digital Agency</h1>
+                                        Buggbear - Art of Creation</h1>
                                     <p class="lead">Dynamically disintermediate technically sound technologies with
                                         compelling quality vectors error-free communities. </p>
                                     <a href="{{route('request-demo')}}" class="btn btn-primary mt-4 me-3">Work With us</a>

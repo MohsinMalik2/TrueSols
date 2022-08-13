@@ -29,7 +29,7 @@
                                     <strong>9am to 5pm EST.</strong>
                                 </p>
                             </div>
-                            <a href="mailto:truesols@gmail.com" class="btn btn-link mt-auto">Chat with us</a>
+                            <a href="mailto:contactbuggbear@gmail.com" class="btn btn-link mt-auto">Chat with us</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -37,10 +37,10 @@
                             <span class="fad fa-envelope fa-3x text-primary"></span>
                             <div class="contact-promo-info mb-4">
                                 <h5>Email Us</h5>
-                                <p>Simple drop us an email at <strong>truesols@gmail.com</strong>
+                                <p>Simple drop us an email at <strong>contactbuggbear@gmail.com</strong>
                                     and you'll receive a reply within 24 hours</p>
                             </div>
-                            <a href="mailto:truesols@gmail.com" class="btn btn-primary mt-auto">Email Us</a>
+                            <a href="mailto:contactbuggbear@gmail.com" class="btn btn-primary mt-auto">Email Us</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -67,7 +67,7 @@
                     <div class="col-lg-6 col-md-8">
                         <div class="section-heading">
                             <h2>Talk to Our Sales & Marketing Department Team</h2>
-                            <p>If you have any question or just want to say 'hello' to Truesols, please fill out form below and we will be get in touch with you within 24 hours.</p>
+                            <p>If you have any question or just want to say 'hello' to Buggbear, please fill out form below and we will be get in touch with you within 24 hours.</p>
                         </div>
                         <form action="#" class="register-form">
                             <div class="row">
