@@ -45,6 +45,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/blog-new', [AdminController::class, 'blog_new'])->name('blog-new');
 
         Route::post('/blog-form', [AdminController::class, 'blog_form'])->name('blog-form');
+        Route::post('/blog_save', [AdminController::class, 'blog_save'])->name('blog_save');
+
+
+
         Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
 
         

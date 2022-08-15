@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/core/menu/menu-types/horizontal-menu.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/plugins/forms/form-quill-editor.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/pages/page-blog.css')}}">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('content')
 <div class="blog-edit-wrapper">
@@ -20,21 +21,21 @@
             </div>
           </div>
           <!-- Form -->
-          <form action="javascript:;" class="mt-2">
+          <form action="javascript:;" id="blog_form" class="mt-2">
             <div class="row">
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-title">Title</label>
-                  <input type="text" id="blog-edit-title" class="form-control" value="The Best Features Coming to iOS and Web design" />
+                  <input type="text" id="blog-edit-title" class="form-control" />
                 </div>
               </div>
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-category">Category</label>
                   <select id="blog-edit-category" class="select2 form-select" multiple>
-                    <option value="Fashion" selected>Fashion</option>
+                    <option value="Fashion" >Fashion</option>
                     <option value="Food">Food</option>
-                    <option value="Gaming" selected>Gaming</option>
+                    <option value="Gaming" >Gaming</option>
                     <option value="Quote">Quote</option>
                     <option value="Video">Video</option>
                   </select>
@@ -43,7 +44,7 @@
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-slug">Slug</label>
-                  <input type="text" id="blog-edit-slug" class="form-control" value="the-best-features-coming-to-ios-and-web-design" />
+                  <input type="text" id="blog-edit-slug" class="form-control"/>
                 </div>
               </div>
               <div class="col-md-6 col-12">
@@ -56,24 +57,23 @@
                   </select>
                 </div>
               </div>
+              <div class="col-md-12" style="float: right">
+                <div class="demo-inline">
+                    <div class="d-flex flex-column mt-0">
+                        <label class="form-check-label mb-50" for="portfolioActive">Active</label>
+                        <div class="form-check form-check-primary form-switch">
+                            <input type="checkbox" checked="" class="form-check-input" id="blogActive" name="blog_is_active">
+                        </div>
+                    </div>
+                </div>
+            </div>
               <div class="col-12">
                 <div class="mb-2">
                   <label class="form-label">Content</label>
                   <div id="blog-editor-wrapper">
                     <div id="blog-editor-container">
                       <div class="editor">
-                        <p>
-                          Cupcake ipsum dolor sit. Amet dessert donut candy chocolate bar cotton dessert candy
-                          chocolate. Candy muffin danish. Macaroon brownie jelly beans marzipan cheesecake oat cake.
-                          Carrot cake macaroon chocolate cake. Jelly brownie jelly. Marzipan pie sweet roll.
-                        </p>
-                        <p><br /></p>
-                        <p>
-                          Liquorice dragée cake chupa chups pie cotton candy jujubes bear claw sesame snaps. Fruitcake
-                          chupa chups chocolate bonbon lemon drops croissant caramels lemon drops. Candy jelly cake
-                          marshmallow jelly beans dragée macaroon. Gummies sugar plum fruitcake. Candy canes candy
-                          cupcake caramels cotton candy jujubes fruitcake.
-                        </p>
+                     
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@
                 </div>
               </div>
               <div class="col-12 mt-50">
-                <button type="submit" class="btn btn-primary me-1">Save Changes</button>
+                <button type="submit" class="btn btn-primary me-1" id='save_blog_btn'>Save Changes</button>
                 <button type="reset" class="btn btn-outline-secondary">Cancel</button>
               </div>
             </div>
@@ -115,6 +115,7 @@
 <script src="{{asset('app-assets/vendors/js/editors/quill/katex.min.js')}}"></script>
 <script src="{{asset('app-assets/vendors/js/editors/quill/highlight.min.js')}}"></script>
 <script src="{{asset('app-assets/vendors/js/editors/quill/quill.min.js')}}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
   (function(window, document, $) {
@@ -223,5 +224,57 @@
       });
     }
   })(window, document, jQuery);
+</script>
+{{-- syed aizaz hasan working  --}}
+<script>
+$('#save_blog_btn').click(function (e) { 
+  e.preventDefault();
+  var formdata=new FormData();
+  formdata.append('image',document.getElementById('blogCustomFile').files[0]);
+  formdata.append('title',$('#blog-edit-title').val());
+  formdata.append('categories',$('#blog-edit-category').val());
+  formdata.append('slug',$('#blog-edit-slug').val());
+  formdata.append('status',$('#blog-edit-status').val());
+  if($('#blogActive').val()=='on')
+  {
+  var active=1; 
+  }else{
+  var  active=0;
+  }
+  formdata.append('active',active);
+  formdata.append('content','content');
+
+  $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+  $.ajax({
+    type: "POST",
+    url: "blog_save",
+    data:formdata,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+      if(response=='saved')
+      {
+        swal({
+          title: "Blog Saved!",
+          text: "Blog is Now Uploaded!",
+          icon: "success",
+          button: "OK",
+        });
+      }else{
+        swal({
+          title: "Error!",
+          text: "Blog Could NOT be upload please contact Admin!",
+          icon: "error",
+          button: "OK",
+        });
+      }
+    }
+  });
+  
+});
 </script>
 @endsection

@@ -10,7 +10,7 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -191,6 +191,41 @@ class AdminController extends Controller
     public function destroyFile()
     {
         return Storage::delete($this->filename);
+    }
+
+
+
+
+
+    //
+    public function blog_save(Request $request)
+    {   
+        $id = Auth::user()->name; 
+        $newblog=new Blog;
+        $newblog->title=$request->title;
+        $newblog->category=$request->categories;
+        $newblog->slug=$request->slug;
+        $newblog->content=$request->content;
+        if($request->hasFile('image'))
+        {
+            $imageName = time().'.'.$request->file('image')->extension();
+            if($request->file('image')->storeAs('public/blog-images', $imageName))
+            {
+                $newblog->thumbnail=$imageName;
+            }
+        }
+        $newblog->created_at=now();
+        $newblog->updated_at=now();
+        $newblog->created_by=$id;
+        $newblog->updated_by=$id;
+        $newblog->active=$request->active;
+        if($newblog->save())
+        {
+            echo 'saved';
+        }else
+        {
+            echo 'failed';
+        }
     }
 
     /*Common Funtions */
