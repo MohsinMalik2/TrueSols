@@ -21,8 +21,8 @@ class CreateBlogsTable extends Migration
             $table->text('content')->nullable();
             $table->text('tags')->nullable();
             $table->string('thumbnail')->nullable();
-            $table->string('created_by');
-            $table->string('updated_by');
+            $table->integer('created_by');
+            $table->integer('updated_by');
             $table->tinyInteger('active');
             $table->timestamps();
         });

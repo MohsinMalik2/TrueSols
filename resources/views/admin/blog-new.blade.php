@@ -72,8 +72,7 @@
                   <label class="form-label">Content</label>
                   <div id="blog-editor-wrapper">
                     <div id="blog-editor-container">
-                      <div class="editor">
-                     
+                      <div class="editor" id="blog-content">
                       </div>
                     </div>
                   </div>
@@ -126,7 +125,7 @@
     var blogFeatureImage = $('#blog-feature-image');
     var blogImageText = document.getElementById('blog-image-text');
     var blogImageInput = $('#blogCustomFile');
-
+    
     // Basic Select2 select
     select.each(function() {
       var $this = $(this);
@@ -225,10 +224,19 @@
     }
   })(window, document, jQuery);
 </script>
+
 {{-- syed aizaz hasan working  --}}
+
+
 <script>
+
+
 $('#save_blog_btn').click(function (e) { 
   e.preventDefault();
+
+  /* To capture the content from quill editor */
+  var contentCapture = $("#blog-content .ql-editor").html();
+
   var formdata=new FormData();
   formdata.append('image',document.getElementById('blogCustomFile').files[0]);
   formdata.append('title',$('#blog-edit-title').val());
@@ -237,12 +245,12 @@ $('#save_blog_btn').click(function (e) {
   formdata.append('status',$('#blog-edit-status').val());
   if($('#blogActive').val()=='on')
   {
-  var active=1; 
+    var active=1; 
   }else{
-  var  active=0;
+    var  active=0;
   }
   formdata.append('active',active);
-  formdata.append('content','content');
+  formdata.append('content',contentCapture);
 
   $.ajaxSetup({
     headers: {
@@ -276,5 +284,8 @@ $('#save_blog_btn').click(function (e) {
   });
   
 });
+
 </script>
+
+
 @endsection

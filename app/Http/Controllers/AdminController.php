@@ -200,7 +200,7 @@ class AdminController extends Controller
     //
     public function blog_save(Request $request)
     {   
-        $id = Auth::user()->name; 
+        $id = Auth::user()->id; 
         $newblog=new Blog;
         $newblog->title=$request->title;
         $newblog->category=$request->categories;
