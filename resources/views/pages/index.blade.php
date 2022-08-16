@@ -1089,7 +1089,7 @@
         <!--cat subscribe end-->
 
         <!--blog section start-->
-        <!-- <section class="home-blog-section ptb-120 ">
+        <section class="home-blog-section ptb-120 ">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-12">
@@ -1188,6 +1188,42 @@
                             </div>
                         </div>
                     </div>
+                    @foreach($blogList as $blog)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-article rounded-custom mb-4 mb-lg-0">
+                                <a href="blog-single.html" class="article-img">
+                                    <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="article" class="img-fluid">
+                                </a>
+                                <div class="article-content p-4">
+                                    <div class="article-category mb-4 d-block">
+                                            <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">{{$blog->category}}</a>
+                                        
+                                    </div>
+                                    <a href="blog-single.html">
+                                        <h2 class="h5 article-title limit-2-line-text">{{$blog->title}}</h2>
+                                    </a>
+                                    @php
+                                        $text = $blog->content;
+                                        $new_text = substr($text, 0 , 15);
+                                    @endphp
+                                    {{$new_text}}</p>
+
+                                    <a href="javascript:;">
+                                        <div class="d-flex align-items-center pt-4">
+                                            <div class="avatar">
+                                                <img src="{{asset('assets/img/testimonial/6.jpg')}}" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
+                                            </div>
+                                            <div class="avatar-info">
+                                                <h6 class="mb-0 avatar-name">Jane Martin</h6>
+                                                <span class="small fw-medium text-muted">April 24, 2021</span>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="row justify-content-center">
                     <div class="text-center mt-5">
@@ -1195,6 +1231,6 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!--blog section end-->
 @endsection

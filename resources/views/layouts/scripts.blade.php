@@ -6,4 +6,5 @@
     <script src="{{asset('assets/js/vendors/parallax.min.js')}}"></script>
     <script src="{{asset('assets/js/vendors/aos.js')}}"></script>
     <script src="{{asset('assets/js/app.js')}}"></script>
+    @yield('scripts')
     <!--endbuild-->

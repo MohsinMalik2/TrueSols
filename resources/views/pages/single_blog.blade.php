@@ -20,6 +20,9 @@
                 <div class="row justify-content-between">
                     <div class="col-lg-8 pe-lg-5">
                         <div class="blog-details-wrap">
+                            @include('pages.partials.blog-details')
+                        </div>
+                        <!-- <div class="blog-details-wrap">
                             <p>Objectively restore stand-alone markets rather than enterprise-wide products. Uniquely underwhelm best-of-breed mindshare through adaptive niches. Interactively leverage existing innovative e-services seamlessly parallel task open-source content without resource sucking technology.
                             </p>
                             <p>Dramatically cultivate frictionless communities with enterprise-wide customer service. Dramatically simplify web-enabled growth strategies rather than integrated imperatives. Interactively leverage existing innovative e-services customer service. Intrinsicly impact web-enabled value vis-a-vis innovative customer service. Continually procrastinate efficient growth strategies for backend experiences.</p>
@@ -64,7 +67,7 @@
                             </div>
 
                             <img src="assets/img/tab-feature-img-2.png" class="img-fluid mt-5 rounded-custom" alt="apply">
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-lg-4">
                         <div class="author-wrap text-center bg-light p-5 sticky-sidebar rounded-custom mt-5 mt-lg-0">
@@ -84,37 +87,6 @@
                     </div>
                 </div>
             </div>
-            <!--newsletter subscription container start-->
-            <div class="container">
-                <!--cat subscribe start-->
-                <div class="bg-dark ptb-60 px-5 mt-100 position-relative overflow-hidden rounded-custom" style="background: url('assets/img/page-header-bg.svg')no-repeat center bottom">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-md-9">
-                            <div class="subscribe-info-wrap text-center position-relative z-2">
-                                <div class="section-heading">
-                                    <h4 class="h5 text-warning">For Latest News & Update</h4>
-                                    <h2>Want Receive the Best SAAS Insights? Subscribe Now!</h2>
-                                    <p>We can help you to create your dream website for better business revenue.</p>
-                                </div>
-                                <div class="form-block-banner mw-60 m-auto mt-5">
-                                    <form id="email-form2" name="email-form" class="subscribe-form d-flex">
-                                        <input type="email" class="form-control me-2" name="Email" data-name="Email" placeholder="Enter your email" id="Email2" required="">
-                                        <input type="submit" value="Join!" data-wait="Please wait..." class="btn btn-primary">
-                                    </form>
-                                </div>
-                                <ul class="nav justify-content-center subscribe-feature-list mt-3">
-                                    <li class="nav-item">
-                                        <span><i class="fad fa-dot-circle text-primary me-2"></i>Don’t worry we won’t send you spam</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-dark-light left-5"></div>
-                </div>
-                <!--cat subscribe end-->
-            </div>
-            <!--newsletter subscription container end-->
         </section>
         <!--blog details section end-->
 
@@ -226,44 +198,4 @@
             </div>
         </section>
         <!--related blog end-->
-
-        <!--cat subscribe start-->
-        <section class="cta-subscribe bg-dark ptb-120 position-relative overflow-hidden">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="subscribe-info-wrap text-center position-relative z-2">
-                            <div class="section-heading">
-                                <h4 class="h5 text-warning">Let's Try! Get Free Support</h4>
-                                <h2>Start Your 14-Day Free Trial</h2>
-                                <p>We can help you to create your dream website for better business revenue.</p>
-                            </div>
-                            <div class="form-block-banner mw-60 m-auto mt-5">
-                                <a href="contact-us.html" class="btn btn-primary">Contact with Us</a>
-                                <a href="http://www.youtube.com/watch?v=hAP2QF--2Dg" class="text-decoration-none popup-youtube d-inline-flex align-items-center watch-now-btn ms-lg-3 ms-md-3 mt-3 mt-lg-0"> <i
-                                            class="fas fa-play"></i> Watch Demo </a>
-                            </div>
-                            <ul class="nav justify-content-center subscribe-feature-list mt-4">
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Free 14-day trial</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span><i
-                                            class="far fa-check-circle text-primary me-2"></i>No credit card required</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Support 24/7</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Cancel anytime</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
-                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
-            </div>
-        </section>
-        <!--cat subscribe end-->
 @endsection
