@@ -10,7 +10,7 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -85,8 +85,7 @@ class AdminController extends Controller
 
     public function blog()
     {
-        $blogList = Blog::all();
-        // return $blogList;
+        $blogList = Blog::all()->where('deleted','=',0);
         return view('admin.blog', compact('blogList'));
     }
 
@@ -94,6 +93,42 @@ class AdminController extends Controller
 
         return view('admin.blog-new');
 
+    }
+
+    public function blog_edit_form($id){
+        $blog=Blog::firstWhere('id',$id);
+        return view('admin.blog-edit',compact('blog'));
+
+    }
+
+    public function blog_edit(Request $request)
+    {
+        $id = Auth::user()->id;
+        $blog=Blog::firstWhere('id',$request->id);
+        $blog->title=$request->title;
+        $blog->category=$request->categories;
+        $blog->slug=$request->slug;
+        $blog->content=$request->content;
+        if($request->hasFile('image'))
+        {
+            $imageName = time().'.'.$request->file('image')->extension();
+            if($request->file('image')->storeAs('public/blog-images', $imageName))
+            {
+                $blog->thumbnail=$imageName;
+            }
+        }
+        $blog->created_at=now();
+        $blog->updated_at=now();
+        $blog->created_by=$id;
+        $blog->updated_by=$id;
+        $blog->active=$request->active;
+        if($blog->save())
+        {
+            echo 'saved';
+        }else
+        {
+            echo 'failed';
+        }
     }
 
     public function blog_form(Request $request){
@@ -191,6 +226,50 @@ class AdminController extends Controller
     public function destroyFile()
     {
         return Storage::delete($this->filename);
+    }
+
+
+
+
+
+    //
+    public function blog_save(Request $request)
+    {   
+        $id = Auth::user()->id; 
+        $newblog=new Blog;
+        $newblog->title=$request->title;
+        $newblog->category=$request->categories;
+        $newblog->slug=$request->slug;
+        $newblog->content=$request->content;
+        if($request->hasFile('image'))
+        {
+            $imageName = time().'.'.$request->file('image')->extension();
+            if($request->file('image')->storeAs('public/blog-images', $imageName))
+            {
+                $newblog->thumbnail=$imageName;
+            }
+        }
+        $newblog->created_at=now();
+        $newblog->updated_at=now();
+        $newblog->created_by=$id;
+        $newblog->updated_by=$id;
+        $newblog->active=$request->active;
+        if($newblog->save())
+        {
+            echo 'saved';
+        }else
+        {
+            echo 'failed';
+        }
+    }
+
+
+    public function blog_delete($id)
+    {
+        $blog=Blog::firstWhere('id',$id);
+        $blog->deleted=1;
+        $blog->save();
+        return redirect()->route('admin.blog');
     }
 
     /*Common Funtions */

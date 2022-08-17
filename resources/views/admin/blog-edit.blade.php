@@ -26,13 +26,14 @@
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-title">Title</label>
-                  <input type="text" id="blog-edit-title" class="form-control" />
+                  <input type="text" name="id" id="id" value="{{$blog->id}}" hidden>
+                  <input type="text" id="blog-edit-title" class="form-control" value="{{$blog->title}}" />
                 </div>
               </div>
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-category">Category</label>
-                  <select id="blog-edit-category" class="select2 form-select" multiple>
+                  <select id="blog-edit-category" class="select2 form-select" multiple value="{{$blog->category}}">
                     <option value="Fashion" >Fashion</option>
                     <option value="Food">Food</option>
                     <option value="Gaming" >Gaming</option>
@@ -44,13 +45,13 @@
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-slug">Slug</label>
-                  <input type="text" id="blog-edit-slug" class="form-control"/>
+                  <input type="text" id="blog-edit-slug" class="form-control" value="{{$blog->slug}}"/>
                 </div>
               </div>
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-status">Status</label>
-                  <select class="form-select" id="blog-edit-status">
+                  <select class="form-select" id="blog-edit-status" value="{{$blog->status}}">
                     <option value="Published">Published</option>
                     <option value="Pending">Pending</option>
                     <option value="Draft">Draft</option>
@@ -62,7 +63,11 @@
                     <div class="d-flex flex-column mt-0">
                         <label class="form-check-label mb-50" for="portfolioActive">Active</label>
                         <div class="form-check form-check-primary form-switch">
-                            <input type="checkbox" checked="" class="form-check-input" id="blogActive" name="blog_is_active">
+                            <input type="checkbox" 
+                            @if ($blog->active=='1')
+                            checked="" 
+                            @endif
+                            class="form-check-input" id="blogActive" name="blog_is_active">
                         </div>
                     </div>
                 </div>
@@ -73,6 +78,7 @@
                   <div id="blog-editor-wrapper">
                     <div id="blog-editor-container">
                       <div class="editor" id="blog-content">
+                        {{$blog->content}}
                       </div>
                     </div>
                   </div>
@@ -240,10 +246,11 @@ $('#save_blog_btn').click(function (e) {
   var formdata=new FormData();
   formdata.append('image',document.getElementById('blogCustomFile').files[0]);
   formdata.append('title',$('#blog-edit-title').val());
+  formdata.append('id',$('#id').val());
   formdata.append('categories',$('#blog-edit-category').val());
   formdata.append('slug',$('#blog-edit-slug').val());
   formdata.append('status',$('#blog-edit-status').val());
-  if($('#blogActive').val()=='on')
+  if(document.getElementById('blogActive').checked)
   {
     var active=1; 
   }else{
@@ -251,7 +258,7 @@ $('#save_blog_btn').click(function (e) {
   }
   formdata.append('active',active);
   formdata.append('content',contentCapture);
-
+  var url="{{route('admin.blog_edit')}}";
   $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -259,7 +266,7 @@ $('#save_blog_btn').click(function (e) {
   });
   $.ajax({
     type: "POST",
-    url: "blog_save",
+    url:url,
     data:formdata,
     contentType: false,
     processData: false,
@@ -267,15 +274,15 @@ $('#save_blog_btn').click(function (e) {
       if(response=='saved')
       {
         swal({
-          title: "Blog Saved!",
-          text: "Blog is Now Uploaded!",
+          title: "Blog Updated!",
+          text: "Blog was Updated Successfully!",
           icon: "success",
           button: "OK",
         });
       }else{
         swal({
           title: "Error!",
-          text: "Blog Could NOT be upload please contact Admin!",
+          text: "Blog Could NOT be updated please contact Admin!",
           icon: "error",
           button: "OK",
         });

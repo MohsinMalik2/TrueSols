@@ -43,8 +43,15 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
         Route::get('/blog-new', [AdminController::class, 'blog_new'])->name('blog-new');
+        Route::get('/blog-edit-form/{id}', [AdminController::class, 'blog_edit_form'])->name('blog_edit_form');
 
         Route::post('/blog-form', [AdminController::class, 'blog_form'])->name('blog-form');
+        Route::post('/blog_save', [AdminController::class, 'blog_save'])->name('blog_save');
+        Route::post('/blog_edit', [AdminController::class, 'blog_edit'])->name('blog_edit');
+        Route::get('/blog-delete/{id}', [AdminController::class, 'blog_delete'])->name('blog_delete');
+
+
+
         Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
 
         
