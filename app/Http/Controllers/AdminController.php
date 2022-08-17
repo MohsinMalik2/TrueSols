@@ -77,10 +77,7 @@ class AdminController extends Controller
 
     /* Portfolio Functions */
 
-    public function settings()
-    {
-        return view('admin.settings');
-    }
+    
   
     /* Blog Functions */
 
@@ -255,5 +252,7 @@ class AdminController extends Controller
     }
 
     /*Common Funtions */
+
+
    
 }

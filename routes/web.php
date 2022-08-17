@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,8 +65,12 @@ Route::group(['middleware' => 'auth'], function () {
 
         /* Blog Routes */
 
+        /*Setting Routes */
+            Route::get('/settings', [ProfileController::class, 'index'])->name('settings');
+            Route::POST('/setting-form', [ProfileController::class, 'form_submit'])->name('setting-form');
 
-        Route::get('/settings', [AdminController::class, 'settings'])->name('settings');
+
+        /*Setting Routes */
 
         
 

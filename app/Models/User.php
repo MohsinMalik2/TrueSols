@@ -23,6 +23,13 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'tagline',
+        'content',
+        'github',
+        'linkedIn',
+        'facebook',
+        'twitter',
+        'image',
         'password',
     ];
 

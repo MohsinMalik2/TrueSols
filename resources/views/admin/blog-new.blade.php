@@ -121,7 +121,7 @@
 <script src="{{asset('app-assets/vendors/js/editors/quill/katex.min.js')}}"></script>
 <script src="{{asset('app-assets/vendors/js/editors/quill/highlight.min.js')}}"></script>
 <script src="{{asset('app-assets/vendors/js/editors/quill/quill.min.js')}}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 <script>
   (function(window, document, $) {
@@ -301,7 +301,7 @@
             });
           }
         }
-      });
+    });
 
 
   });

@@ -71,17 +71,17 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="author-wrap text-center bg-light p-5 sticky-sidebar rounded-custom mt-5 mt-lg-0">
-                            <img src="assets/img/team/team-2.jpg" alt="author" width="120" class="img-fluid shadow-sm rounded-circle">
+                            <img src="{{asset('storage/profile-images/'.$blog->user->image)}}" alt="author" width="120" class="img-fluid shadow-sm rounded-circle">
                             <div class="author-info my-4">
                                 <h5 class="mb-0">{{$blog->user->name}}</h5>
-                                <span class="small">Head of Designer</span>
+                                <span class="small">{{$blog->user->tagline}}</span>
                             </div>
-                            <p>Uniquely communicate open-source technology after value-added ideas. Professionally engage efficient channels without B2C functionalities.</p>
+                            <p>{{$blog->user->content}}</p>
                             <ul class="list-unstyled author-social-list list-inline mt-3 mb-0">
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="{{$blog->user->linkedIn}}"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li class="list-inline-item"><a href="{{$blog->user->twitter}}"><i class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="{{$blog->user->github}}"><i class="fab fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="{{$blog->user->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                             </ul>
                         </div>
                     </div>
