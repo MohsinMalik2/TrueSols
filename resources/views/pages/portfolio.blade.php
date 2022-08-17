@@ -16,7 +16,6 @@
                 <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
             </div>
         </section>
-
         
         <!-- portfolio start -->
         <section class="portfolio bg-light ptb-120">

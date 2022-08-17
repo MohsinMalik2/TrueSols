@@ -589,7 +589,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                            @foreach($portfolioList as $portfolio)
+                                @foreach($portfolioList as $portfolio)
                                     @if($portfolio->category == 2)
                                         <div class="col-lg-4">
                                             <div class="single-portfolio-item mb-30">
@@ -926,167 +926,6 @@
         </section>
         <!-- app two customer review end -->
 
-        <!--Testimonial  price -->
-        <!-- Price Two Start-->
-            <!-- <section class="price-two ptb-120  bg-light">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-10">
-                        <div class="section-heading text-center">
-                            <h2>
-                                Get our any Service <br />
-                  With Suitable Pricing
-                            </h2>
-                            <p>
-                                Credibly grow premier ideas rather than bricks-and-clicks strategic
-                                theme areas distributed for stand-alone web-readiness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="position-relative single-pricing-wrap rounded-custom bg-white custom-shadow p-5 mb-4 mb-lg-0">
-                            <div class="pricing-header mb-32">
-                                <h3 class="package-name text-primary d-block">Stater</h3>
-                                <h4 class="display-6 fw-semi-bold">$29<span>/month</span></h4>
-                            </div>
-                            <div class="pricing-info mb-4">
-                                <ul class="pricing-feature-list list-unstyled">
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>Create
-                                        Unique Websites
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>
-                                        Automate Your Busy Work
-                                    </li>
-                                    <li>
-                                        <i class="far fa-times-circle text-muted me-2"></i>
-                                        Optimize All Your Efforts
-                                    </li>
-                                    <li>
-                                        <i class="far fa-times-circle text-muted me-2"></i>
-                                        Centralized Teams
-                                    </li>
-                                    <li>
-                                        <i class="far fa-times-circle text-muted me-2"></i>
-                                        Shareable Team Libraries
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="request-demo.html" class="btn btn-outline-primary mt-2">Get Started Now</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="position-relative single-pricing-wrap rounded-custom bg-gradient text-white p-5 mb-4 mb-lg-0">
-                            <div class="pricing-header mb-32">
-                                <h3 class="package-name text-warning d-block">Advanced</h3>
-                                <h4 class="display-6 fw-semi-bold">$49<span>/month</span></h4>
-                            </div>
-                            <div class="pricing-info mb-4">
-                                <ul class="pricing-feature-list list-unstyled">
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>Create
-                                        Unique Websites
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>
-                                        Automate Your Busy Work
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>
-                                        Optimize All Your Efforts
-                                    </li>
-                                    <li>
-                                        <i class="far fa-times-circle text-muted me-2"></i>
-                                        Centralized Teams
-                                    </li>
-                                    <li>
-                                        <i class="far fa-times-circle text-muted me-2"></i>
-                                        Shareable Team Libraries
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="request-demo.html" class="btn btn-primary mt-2">Get Started Now</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="position-relative single-pricing-wrap rounded-custom bg-white custom-shadow p-5 mb-4 mb-lg-0">
-                            <div class="pricing-header mb-32">
-                                <h3 class="package-name text-primary d-block">Premium</h3>
-                                <h4 class="display-6 fw-semi-bold">$69<span>/month</span></h4>
-                            </div>
-                            <div class="pricing-info mb-4">
-                                <ul class="pricing-feature-list list-unstyled">
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>
-                                        Create Unique Websites
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>
-                                        Automate Your Busy Work
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i>
-                                        Optimize All Your Efforts
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i> Video
-                                        Centralized Teams
-                                    </li>
-                                    <li>
-                                        <i class="far fa-check-circle text-success me-2"></i> 40
-                                        Shareable Team Libraries
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="request-demo.html" class="btn btn-outline-primary mt-2">Get Started Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- Price Two End -->
-        <!-- Testimonial end -->
-
-        <!--cat subscribe start-->
-        <!-- <section class="cta-subscribe bg-dark text-white ptb-120 position-relative overflow-hidden">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="subscribe-info-wrap text-center position-relative z-2">
-                            <div class="section-heading" data-aos="fade-up">
-                                <h4 class="h5 text-warning">Let's Try! Get Free Support</h4>
-                                <h2>Start Your 14-Day Free Trial</h2>
-                                <p>We can help you to create your dream website for better business revenue.</p>
-                            </div>
-                            <div class="form-block-banner mw-60 m-auto mt-5" data-aos="fade-up" data-aos-delay="50">
-                                <a href="contact-us.html" class="btn btn-primary">Contact with Us</a>
-                                
-                            </div>
-                            <ul class="nav justify-content-center subscribe-feature-list mt-4" data-aos="fade-up" data-aos-delay="100">
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Free 14-day trial</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>No credit card required</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Support 24/7</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span><i class="far fa-check-circle text-primary me-2"></i>Cancel anytime</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light left-5"></div>
-                <div class="bg-circle rounded-circle circle-shape-1 position-absolute bg-warning right-5"></div>
-            </div>
-        </section> -->
-        <!--cat subscribe end-->
 
         <!--blog section start-->
         <section class="home-blog-section ptb-120 ">
@@ -1101,121 +940,40 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article rounded-custom mb-4 mb-lg-0">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="{{asset('assets/img/blog/blog-1.jpg')}}" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">Design</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Do you really understand the concept of product value?</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="{{asset('assets/img/testimonial/6.jpg')}}" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Jane Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2021</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article rounded-custom mb-4 mb-lg-0">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="{{asset('assets/img/blog/blog-2.jpg')}}" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Customer</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why communities help you build better products for your business</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="{{asset('assets/img/testimonial/1.jpg')}}" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Veronica P. Byrd</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2021</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article rounded-custom mb-4 mb-lg-0 mb-md-0">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="{{asset('assets/img/blog/blog-3.jpg')}}" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why communities help you build better products</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="{{asset('assets/img/testimonial/3.jpg')}}" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Martin Gilbert</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2021</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
                     @foreach($blogList as $blog)
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 my-2">
                             <div class="single-article rounded-custom mb-4 mb-lg-0">
-                                <a href="blog-single.html" class="article-img">
+                                <a href="{{route('blog-detail', $blog->id)}}" class="article-img">
                                     <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="article" class="img-fluid">
                                 </a>
                                 <div class="article-content p-4">
                                     <div class="article-category mb-4 d-block">
-                                            <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">{{$blog->category}}</a>
-                                        
+                                        <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">{{$blog->category}}</a>
+                                          
                                     </div>
-                                    <a href="blog-single.html">
+                                    <a href="{{route('blog-detail', $blog->id)}}">
                                         <h2 class="h5 article-title limit-2-line-text">{{$blog->title}}</h2>
                                     </a>
-                                    @php
-                                        $text = $blog->content;
-                                        $new_text = substr($text, 0 , 15);
-                                    @endphp
-                                    {{$new_text}}</p>
-
+                                   
+                                    <p>{{$blog->overview}}</p>
+                                    <p>
+                                        @php
+                                            $str = $blog->tags;
+                                            $arr = explode(",",$str);
+                                        @endphp
+                                        @foreach($arr as $tags)
+                                            <span class="d-inline-block text-dark badge bg-warning-soft">{{$tags}}</span>
+                                        @endforeach
+                                    </p>
                                     <a href="javascript:;">
                                         <div class="d-flex align-items-center pt-4">
                                             <div class="avatar">
-                                                <img src="{{asset('assets/img/testimonial/6.jpg')}}" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
+                                                <img src="{{asset('assets/img/testimonial/6.jpg')}}" alt="avatar" 
+                                                width="40" class="img-fluid rounded-circle me-3">
                                             </div>
                                             <div class="avatar-info">
-                                                <h6 class="mb-0 avatar-name">Jane Martin</h6>
-                                                <span class="small fw-medium text-muted">April 24, 2021</span>
+                                                <h6 class="mb-0 avatar-name">{{$blog->user->name}}</h6>
+                                                <span class="small fw-medium text-muted">{{date("F d, Y", strtotime($blog->created_at))}}</span>
                                             </div>
                                         </div>
                                     </a>
@@ -1227,7 +985,7 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="text-center mt-5">
-                        <a href="blog.html" class="btn btn-primary">View All Article</a>
+                        <a href="{{route('blogs')}}" class="btn btn-primary">View All Article</a>
                     </div>
                 </div>
             </div>

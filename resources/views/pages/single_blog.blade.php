@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-8 col-12">
-                        <h1 class="fw-bold display-5">Why customer retention is the ultimate growth strategy</h1>
+                        <h1 class="fw-bold display-5">{{$blog->title}}</h1>
                     </div>
                 </div>
                 <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
@@ -73,7 +73,7 @@
                         <div class="author-wrap text-center bg-light p-5 sticky-sidebar rounded-custom mt-5 mt-lg-0">
                             <img src="assets/img/team/team-2.jpg" alt="author" width="120" class="img-fluid shadow-sm rounded-circle">
                             <div class="author-info my-4">
-                                <h5 class="mb-0">Elena Mou</h5>
+                                <h5 class="mb-0">{{$blog->user->name}}</h5>
                                 <span class="small">Head of Designer</span>
                             </div>
                             <p>Uniquely communicate open-source technology after value-added ideas. Professionally engage efficient channels without B2C functionalities.</p>
@@ -91,111 +91,67 @@
         <!--blog details section end-->
 
         <!--related blog start-->
-        <section class="related-blog-list ptb-120 bg-light">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="section-heading">
-                            <h4 class="h5 text-primary">Related News</h4>
-                            <h2>More Latest News and Blog at Quiety</h2>
+        @if(count($blogList) != 0)
+            <section class="related-blog-list ptb-120 bg-light">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="section-heading">
+                                <h4 class="h5 text-primary">Related News</h4>
+                                <h2>More Latest News and Blog at Quiety</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="text-start text-lg-end mb-4 mb-lg-0 mb-xl-0">
+                                <a href="blog.html" class="btn btn-primary">View All Article</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-12">
-                        <div class="text-start text-lg-end mb-4 mb-lg-0 mb-xl-0">
-                            <a href="blog.html" class="btn btn-primary">View All Article</a>
-                        </div>
+                    <div class="row">
+                        @foreach($blogList as $blog)
+                            <div class="col-lg-4 col-md-6 my-2">
+                                <div class="single-article rounded-custom mb-4 mb-lg-0">
+                                    <a href="{{route('blog-detail', $blog->id)}}" class="article-img">
+                                        <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="article" class="img-fluid">
+                                    </a>
+                                    <div class="article-content p-4">
+                                        <div class="article-category mb-4 d-block">
+                                            <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">{{$blog->category}}</a>
+                                            
+                                        </div>
+                                        <a href="{{route('blog-detail', $blog->id)}}">
+                                            <h2 class="h5 article-title limit-2-line-text">{{$blog->title}}</h2>
+                                        </a>
+                                    
+                                        <p>{{$blog->overview}}</p>
+                                        <p>
+                                            @php
+                                                $str = $blog->tags;
+                                                $arr = explode(",",$str);
+                                            @endphp
+                                            @foreach($arr as $tags)
+                                                <span class="d-inline-block text-dark badge bg-warning-soft">{{$tags}}</span>
+                                            @endforeach
+                                        </p>
+                                        <a href="javascript:;">
+                                            <div class="d-flex align-items-center pt-4">
+                                                <div class="avatar">
+                                                    <img src="{{asset('assets/img/testimonial/6.jpg')}}" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
+                                                </div>
+                                                <div class="avatar-info">
+                                                    <h6 class="mb-0 avatar-name">{{$blog->user->name}}</h6>
+                                                    <span class="small fw-medium text-muted">{{date("F d, Y", strtotime($blog->created_at))}}</span>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article rounded-custom mb-4 mb-lg-0">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-1.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">Design</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Do you really understand the concept of product value?</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/6.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Jane Martin</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2021</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article rounded-custom mb-4 mb-lg-0">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-2.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Customer</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why communities help you build better products for your business</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/1.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Veronica P. Byrd</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2021</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-article rounded-custom mb-4 mb-lg-0 mb-md-0">
-                            <a href="blog-single.html" class="article-img">
-                                <img src="assets/img/blog/blog-3.jpg" alt="article" class="img-fluid">
-                            </a>
-                            <div class="article-content p-4">
-                                <div class="article-category mb-4 d-block">
-                                    <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                                </div>
-                                <a href="blog-single.html">
-                                    <h2 class="h5 article-title limit-2-line-text">Why communities help you build better products</h2>
-                                </a>
-                                <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                                <a href="javascript:;">
-                                    <div class="d-flex align-items-center pt-4">
-                                        <div class="avatar">
-                                            <img src="assets/img/testimonial/3.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                        </div>
-                                        <div class="avatar-info">
-                                            <h6 class="mb-0 avatar-name">Martin Gilbert</h6>
-                                            <span class="small fw-medium text-muted">April 24, 2021</span>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        @endif
         <!--related blog end-->
 @endsection

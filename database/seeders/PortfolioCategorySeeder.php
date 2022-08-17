@@ -39,11 +39,11 @@ class PortfolioCategorySeeder extends Seeder
             ]
         ];
 
-        foreach ($data as $country) {
-            // dd($country['name']);
+        foreach ($data as $category) {
+            // dd($category['name']);
             DB::table('portfolio_categories')->insert([
-                'name' => $country['name'],
-                'created_by' => $country['created_by']
+                'name' => $category['name'],
+                'created_by' => $category['created_by']
             ]);
         };
     }

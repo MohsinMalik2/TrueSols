@@ -16,26 +16,43 @@
               <img src="../../../app-assets/images/portrait/small/avatar-s-9.jpg" width="38" height="38" alt="Avatar" />
             </div>
             <div class="author-info">
-              <h6 class="mb-25">Chad Alexander</h6>
-              <p class="card-text">May 24, 2020</p>
+              <h6 class="mb-25">{{$user->name}}</h6>
+              <p class="card-text">{{$user->email}}</p>
             </div>
           </div>
           <!-- Form -->
           <form action="javascript:;" id="blog_form" class="mt-2">
-            <div class="row">
+            <input type="text" name="uuid" id="uuid" value="{{$blog->id}}" hidden>
+            <div class="row d-flex align-items-center">
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-title">Title</label>
-                  <input type="text" id="blog-edit-title" class="form-control" />
+                  <input type="text" id="blog-edit-title" class="form-control" value="{{$blog->title}}" />
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="mb-2">
+                  <label class="form-label" for="blog-overview">Overview <small class="text-muted">(maximum 100 letters)</small></label>
+                  <input type="text" id="blog-overview" class="form-control" maxlength="100" name="overview" value="{{$blog->overview}}" />
                 </div>
               </div>
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-category">Category</label>
-                  <select id="blog-edit-category" class="select2 form-select" multiple>
-                    <option value="Fashion" >Fashion</option>
+                  <select id="blog-edit-category" class="select2 form-select" value="{{$blog->category}}">
+                    @foreach($categories as $category)
+                    <option value={{$category->name}}>{{$category->name}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="mb-2">
+                  <label class="form-label" for="blog-tags">Tags</label>
+                  <select id="blog-tags" class="select2 form-select tags-select2" multiple>
+                    <option value="Fashion">Fashion</option>
                     <option value="Food">Food</option>
-                    <option value="Gaming" >Gaming</option>
+                    <option value="Gaming">Gaming</option>
                     <option value="Quote">Quote</option>
                     <option value="Video">Video</option>
                   </select>
@@ -44,35 +61,26 @@
               <div class="col-md-6 col-12">
                 <div class="mb-2">
                   <label class="form-label" for="blog-edit-slug">Slug</label>
-                  <input type="text" id="blog-edit-slug" class="form-control"/>
+                  <input type="text" id="blog-edit-slug" class="form-control" value="{{$blog->slug}}" />
                 </div>
               </div>
-              <div class="col-md-6 col-12">
-                <div class="mb-2">
-                  <label class="form-label" for="blog-edit-status">Status</label>
-                  <select class="form-select" id="blog-edit-status">
-                    <option value="Published">Published</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Draft">Draft</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-12" style="float: right">
+              <div class="col-md-6" style="float: right">
                 <div class="demo-inline">
-                    <div class="d-flex flex-column mt-0">
-                        <label class="form-check-label mb-50" for="portfolioActive">Active</label>
-                        <div class="form-check form-check-primary form-switch">
-                            <input type="checkbox" checked="" class="form-check-input" id="blogActive" name="blog_is_active">
-                        </div>
+                  <div class="d-flex flex-inline mt-0 mb-1">
+                    <label class="form-check-label" for="portfolioActive" style="padding-top:4px;">Active</label>
+                    <div class="form-check form-check-primary form-switch mx-1">
+                      <input type="checkbox" class="form-check-input" id="blogActive" name="blog_is_active" @if ($blog->active=='1') checked="" @endif >
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
               <div class="col-12">
                 <div class="mb-2">
                   <label class="form-label">Content</label>
                   <div id="blog-editor-wrapper">
                     <div id="blog-editor-container">
-                      <div class="editor" id="blog-content">
+                      <div class="editor" id="blog-content" style="min-height:165px;">
+                        {{$blog->content}}
                       </div>
                     </div>
                   </div>
@@ -86,7 +94,6 @@
                     <div class="featured-info">
                       <small class="text-muted">Required image resolution 800x400, image size 10mb.</small>
                       <p class="my-50">
-                        <a href="#" id="blog-image-text">C:\fakepath\banner.jpg</a>
                       </p>
                       <div class="d-inline-block">
                         <input class="form-control" type="file" id="blogCustomFile" accept="image/*" />
@@ -125,7 +132,7 @@
     var blogFeatureImage = $('#blog-feature-image');
     var blogImageText = document.getElementById('blog-image-text');
     var blogImageInput = $('#blogCustomFile');
-    
+
     // Basic Select2 select
     select.each(function() {
       var $this = $(this);
@@ -134,6 +141,7 @@
         // the following code is used to disable x-scrollbar when click in select input and
         // take 100% width in responsive also
         dropdownAutoWidth: true,
+        tags: true,
         width: '100%',
         dropdownParent: $this.parent()
       });
@@ -229,62 +237,74 @@
 
 
 <script>
+  $('#save_blog_btn').click(function(e) {
+    e.preventDefault();
+    var uuid = $("#uuid").val();
+    var contentCapture = "";
+    var url = "";
 
-
-$('#save_blog_btn').click(function (e) { 
-  e.preventDefault();
-
-  /* To capture the content from quill editor */
-  var contentCapture = $("#blog-content .ql-editor").html();
-
-  var formdata=new FormData();
-  formdata.append('image',document.getElementById('blogCustomFile').files[0]);
-  formdata.append('title',$('#blog-edit-title').val());
-  formdata.append('categories',$('#blog-edit-category').val());
-  formdata.append('slug',$('#blog-edit-slug').val());
-  formdata.append('status',$('#blog-edit-status').val());
-  if($('#blogActive').val()=='on')
-  {
-    var active=1; 
-  }else{
-    var  active=0;
-  }
-  formdata.append('active',active);
-  formdata.append('content',contentCapture);
-
-  $.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-  });
-  $.ajax({
-    type: "POST",
-    url: "blog_save",
-    data:formdata,
-    contentType: false,
-    processData: false,
-    success: function (response) {
-      if(response=='saved')
+    /* To capture the content from quill editor */
+    
+    var formdata = new FormData();
+      formdata.append('image', document.getElementById('blogCustomFile').files[0]);
+      formdata.append('title', $('#blog-edit-title').val());
+      formdata.append('categories', $('#blog-edit-category').val());
+      formdata.append('slug', $('#blog-edit-slug').val());
+      formdata.append('overview', $('#blog-overview').val());
+      formdata.append('tags', $('#blog-tags').val());
+      if(document.getElementById('blogActive').checked)
       {
-        swal({
-          title: "Blog Saved!",
-          text: "Blog is Now Uploaded!",
-          icon: "success",
-          button: "OK",
-        });
+        var active=1; 
       }else{
-        swal({
-          title: "Error!",
-          text: "Blog Could NOT be upload please contact Admin!",
-          icon: "error",
-          button: "OK",
-        });
+        var  active=0;
       }
-    }
-  });
-  
-});
+      formdata.append('active', active);
+      
 
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+    if (!uuid) {
+      url = "{{route('admin.blog_save')}}";
+      contentCapture = $("#blog-content .ql-editor").html();
+    } 
+    else {
+
+      url = "{{route('admin.blog_edit')}}";
+      formdata.append('id', $("#uuid").val());
+      contentCapture = $("#blog-content .ql-editor").text();
+
+    }
+    formdata.append('content', contentCapture);
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: formdata,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+          if (response == 'saved') {
+            swal({
+              title: "Blog Saved!",
+              text: "Blog is Now Uploaded!",
+              icon: "success",
+              button: "OK",
+            });
+          } else {
+            swal({
+              title: "Error!",
+              text: "Blog Could NOT be upload please contact Admin!",
+              icon: "error",
+              button: "OK",
+            });
+          }
+        }
+      });
+
+
+  });
 </script>
 
 

@@ -24,7 +24,9 @@
                           </li>
                           <li><a href="{{ route('services') }}" class="nav-link">Services</a></li>
 
-                          <!-- <li><a href="{{route('blogs')}}" class="nav-link">Blogs</a></li> -->
+                          <li><a href="{{route('blogs')}}" class="nav-link">Blogs</a></li>
+
+                          <li><a href="{{route('portfolio')}}" class="nav-link">Portfolio</a></li>
 
                           <li><a href="{{route('about-us')}}" class="nav-link">About Us</a></li>
 

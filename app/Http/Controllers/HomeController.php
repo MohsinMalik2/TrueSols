@@ -38,6 +38,17 @@ class HomeController extends Controller
     public function blogs() {
         return view('pages.blogs');
     }
+    
+    public function blog_detail($id)
+    {
+        
+        $blog = Blog::where('id',$id)->first();
+        $user_id = $blog->user_id;
+        $blogList = Blog::where('user_id',$user_id)->where('id','!=',$id)->get();
+        return view('pages.single_blog', compact('blog','blogList'));
+    }
+
+
 
     public function contactUs() {
         return view('pages.contact_us');

@@ -48,36 +48,15 @@
                                                 <td class="text-truncate" style="max-width:70px;">{{$portfolio->created_at}}</td>
                                                 <td class="text-truncate" style="max-width:70px;">{{$portfolio->updated_at}}</td>
                                                 <td >
-                                                    <div class="d-inline-flex">
-                                                        <a class="pe-1 dropdown-toggle hide-arrow text-primary" data-bs-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical font-small-4">
-                                                                <circle cx="12" cy="12" r="1"></circle>
-                                                                <circle cx="12" cy="5" r="1"></circle>
-                                                                <circle cx="12" cy="19" r="1"></circle>
-                                                            </svg>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a href="javascript:;" class="dropdown-item">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text font-small-4 me-50">
-                                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                                                </svg>Details</a><a href="javascript:;" class="dropdown-item">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive font-small-4 me-50">
-                                                                    <polyline points="21 8 21 21 3 21 3 8"></polyline>
-                                                                    <rect x="1" y="3" width="22" height="5"></rect>
-                                                                    <line x1="10" y1="12" x2="14" y2="12"></line>
-                                                                </svg>Archive</a><a href="javascript:;" class="dropdown-item delete-record">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 font-small-4 me-50">
-                                                                    <polyline points="3 6 5 6 21 6"></polyline>
-                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                                    <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                                    <line x1="14" y1="11" x2="14" y2="17"></line>
-                                                                </svg>Delete</a>
-                                                        </div>
-                                                    </div>
-                                                    <a href="javascript:;" class="item-edit">
+                                                    <a onclick="deletePortfolio('{{$portfolio->id}}')" class="item-delete">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 font-small-4 me-50">
+                                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                                                        </svg>
+                                                    </a>
+                                                    <a onclick="editPortfolio('{{$portfolio->id}}','{{$portfolio->name}}','{{$portfolio->thumbnail}}','{{$portfolio->category}}','{{$portfolio->url}}','{{$portfolio->is_active}}')" class="item-edit">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit font-small-4">
                                                             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
@@ -110,24 +89,25 @@
             <div class="modal-body">
                 <form method="POST" action="{{ route('admin.portfolio-form') }}" enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" id="uuid">
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Thumbnail </label>
                                 <div class="mb-1">
-                                    <input type="file" placeholder="Upload File" class="form-control" name="thumbnail" />
+                                    <input type="file" placeholder="Upload File" class="form-control" name="thumbnail" id="thumbnail"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label>Name </label>
                                 <div class="mb-1">
-                                    <input type="text" placeholder="Project Title" class="form-control" name="name" />
+                                    <input type="text" placeholder="Project Title" class="form-control" name="name" id="name"/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label>Tags </label>
                                 <div class="mb-1">
-                                    <select class="select2 form-select" multiple="multiple" id="default-select-multi" name="tags[]">
+                                    <select class="select2 form-select" multiple="multiple" id="default-select-multi" id="tags" name="tags[]">
                                         <option value="square">Square</option>
                                         <option value="rectangle">Rectangle</option>
                                         <option value="rombo">Rombo</option>
@@ -141,7 +121,7 @@
                             <div class="col-md-6">
                                 <label>Category </label>
                                 <div class="mb-1">
-                                    <select class="select2 form-select" name="category">
+                                    <select class="select2 form-select" name="category" id="category">
                                         @foreach($categories as $category)
                                         <option value={{$category->id}}>{{$category->name}}</option>
                                         @endforeach
@@ -151,7 +131,7 @@
                             <div class="col-md-6">
                                 <label>URL </label>
                                 <div class="mb-1">
-                                    <input type="text" class="form-control" name="url">
+                                    <input type="text" class="form-control" name="url" id="url">
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -187,5 +167,26 @@
     $(document).ready(function() {
 
     });
+    editPortfolio('1','Amazone','1660737077.jpg','3','333.com','on')
+    function editPortfolio(id,name,thumbnail,category,url,is_active){
+        $("uuid").val(id);
+        $("#name").val(name);
+        $("#thumbnail").attr('placeholder', thumbnail);
+        $("#category").val(category);
+        $("#url").val(url);
+        if(is_active == "on"){
+            $("#portfolioActive").attr('checked');
+        }
+        else{
+            $("#portfolioActive").removeAttr('checked');
+        }
+
+        $("#portfolio-form-modal").modal('show');
+
+    }
+
+    function deletePortfolio(id){
+        alert(id);
+    }
 </script>
 @endsection
