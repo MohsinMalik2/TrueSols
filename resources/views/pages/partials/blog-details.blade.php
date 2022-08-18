@@ -8,7 +8,7 @@
 <div class="my-3 row">
     <div class="col-md-4">
         <p class="fw-bold">Category: 
-                <small class="fw-normal d-inline-block text-primary badge bg-primary-soft">{{$blog->category}}</small>
+            <small class="fw-normal d-inline-block text-primary badge bg-primary-soft">{{$blog->category}}</small>
         </p>
     </div>
     <div class="col-md-8 text-end">

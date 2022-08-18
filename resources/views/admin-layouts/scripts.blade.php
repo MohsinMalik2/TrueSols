@@ -28,6 +28,7 @@
     <!-- END: Page JS-->
 
     <script>
+         
         $(window).on('load', function() {
             if (feather) {
                 feather.replace({
@@ -36,4 +37,5 @@
                 });
             }
         })
+        
     </script>

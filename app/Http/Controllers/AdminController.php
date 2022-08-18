@@ -38,7 +38,7 @@ class AdminController extends Controller
     
     public function portfolio()
     {
-        $categories = DB::table('portfolio_categories')->get();
+        $categories = DB::table('categories')->get();
         $portfolioList = Portfolio::all();
 
         return view('admin.portfolio',compact('categories','portfolioList'));
@@ -90,14 +90,14 @@ class AdminController extends Controller
     
 
     public function blog_new($id = null){
-        $categories = DB::table('portfolio_categories')->get();
+        $categories = DB::table('categories')->get();
         $user = Auth::user();
         $blog= new Blog();
         return view('admin.blog-new',compact('categories','user', 'blog')); 
     }
 
     public function blog_edit_form($id = null){
-        $categories = DB::table('portfolio_categories')->get();
+        $categories = DB::table('categories')->get();
         $user = Auth::user();
         $blog=Blog::firstWhere('id',$id);
         return view('admin.blog-new',compact('blog','categories','user'));

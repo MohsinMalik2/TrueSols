@@ -209,7 +209,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">{{ Auth::user()->name }}
+                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder" id="global-name">{{ Auth::user()->name }}
 
                         </span>
                         <span class="user-status">Admin</span></div><span class="avatar"><img class="round" src="{{asset('storage/profile-images/'.Auth::user()->image)}}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
@@ -272,7 +272,7 @@
                 <div class="d-flex align-items-center">
                     <div class="avatar me-75"><img src="../../../app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
                     <div class="search-data">
-                        <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                        <p class="search-data-title mb-0">{{Auth::user()->name}}</p><small class="text-muted">UI designer</small>
                     </div>
                 </div>
             </a></li>
@@ -309,3 +309,4 @@
     <!-- END: Header-->
 
     @include('admin-layouts.main-menu')
+

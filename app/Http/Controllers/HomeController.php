@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use App\Models\Blog;
+use App\Models\Category;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -36,7 +38,9 @@ class HomeController extends Controller
     }
 
     public function blogs() {
-        return view('pages.blogs');
+        $blogs = Blog::paginate(15);
+        $categories = Category::all();
+        return view('pages.blogs',compact('blogs','categories'));
     }
     
     public function blog_detail($id)
@@ -55,7 +59,8 @@ class HomeController extends Controller
     }
 
     public function aboutUs() {
-        return view('pages.about_us');
+        $users = User::all();
+        return view('pages.about_us',compact('users'));
     }
 
     public function requestDemo(){

@@ -1,5 +1,30 @@
 @extends('layouts.app')
+@section('page-meta')
+        <!--twitter og-->
+        <meta name="twitter:site" content="www.buggbear.com/portfolio">
+        <meta name="twitter:creator" content="Mohsin Nawaz">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Our Work - Buggbear - Art of Creation">
+        <meta name="twitter:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="twitter:image" content="{{asset('assets/img/social-banner.png')}}">
 
+        <!--facebook og-->
+        <meta property="og:url" content="www.buggbear.com/portfolio">
+        <meta name="twitter:title" content="Our Work - Buggbear - Art of Creation">
+        <meta property="og:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta property="og:image" content="{{asset('assets/img/fb-trusols-banner.png')}}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="600">
+
+        <!--meta-->
+        <meta name="description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="author" content="Mohsin Nawaz">
+
+        <!--title-->
+        <title>Our Work - Buggbear</title>
+
+@endsection
 @section('content')
 
         <!--page header section start-->

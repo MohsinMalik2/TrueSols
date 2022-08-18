@@ -1,5 +1,30 @@
 @extends('layouts.app')
+@section('page-meta')
+        <!--twitter og-->
+        <meta name="twitter:site" content="www.buggbear.com/blogs">
+        <meta name="twitter:creator" content="Mohsin Nawaz">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Blogs - Buggbear - Art of Creation">
+        <meta name="twitter:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="twitter:image" content="{{asset('assets/img/social-banner.png')}}">
 
+        <!--facebook og-->
+        <meta property="og:url" content="www.buggbear.com/blogs">
+        <meta name="twitter:title" content="Blogs - Buggbear - Art of Creation">
+        <meta property="og:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta property="og:image" content="{{asset('assets/img/fb-trusols-banner.png')}}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="600">
+
+        <!--meta-->
+        <meta name="description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="author" content="Mohsin Nawaz">
+
+        <!--title-->
+        <title>Blogs - Buggbear</title>
+
+@endsection
 @section('content')
 
 <!--page header section start-->
@@ -15,15 +40,9 @@
         </div>
         <div class="row justify-content-center text-center">
             <div class="col-xl-8">
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Marketing</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Sales</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Design</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Development</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Product Design</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Customers</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Agency</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Investors</a>
-                <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">Research</a>
+                @foreach($categories as $category)
+                    <a href="javascript:;" class="btn btn-soft-primary btn-pill btn-sm m-2">{{$category->name}}</a>
+                @endforeach
             </div>
         </div>
         <div class="bg-circle rounded-circle circle-shape-3 position-absolute bg-dark-light right-5"></div>
@@ -35,88 +54,38 @@
 <section class="masonary-blog-section ptb-120">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="single-article feature-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-10.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Marketing</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">Why product managers must be strategic about chasing new trends</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/1.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2022</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="single-article feature-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-11.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">Two tried-and-true frameworks for achieving product/market fit</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/4.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2022</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
+        @foreach($blogs as $blog)
             <div class="col-lg-4 col-md-6">
                 <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-1.jpg" alt="article" class="img-fluid">
+                    <a href="{{route('blog-detail', $blog->id)}}" class="article-img">
+                        <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="{{$blog->title}}" class="img-fluid">
                     </a>
                     <div class="article-content p-4">
                         <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">Design</a>
+                            <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">{{$blog->category}}</a>
                         </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">Do you really understand the concept of product value?</h2>
+                        <a href="{{route('blog-detail', $blog->id)}}">
+                            <h2 class="h5 article-title limit-2-line-text">{{$blog->title}}</h2>
                         </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
+                        <p class="limit-2-line-text">{{$blog->overview}}</p>
+                        <p>
+                            @php
+                                $str = $blog->tags;
+                                $arr = explode(",",$str);
+                            @endphp
+                            @foreach($arr as $tags)
+                                <span class="d-inline-block text-dark badge bg-warning-soft">{{$tags}}</span>
+                            @endforeach
+                        </p>
                         <a href="javascript:;">
                             <div class="d-flex align-items-center pt-4">
                                 <div class="avatar">
-                                    <img src="assets/img/testimonial/6.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
+                                    <img src="{{asset('storage/profile-images/'.$blog->user->image)}}" alt="{{$blog->user->name}}" 
+                                    width="40" class="img-fluid rounded-circle me-3">
                                 </div>
                                 <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Jane Martin</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2021</span>
+                                    <h6 class="mb-0 avatar-name">{{$blog->user->name}}</h6>
+                                    <span class="small fw-medium text-muted">{{date("F d, Y", strtotime($blog->created_at))}}</span>
                                 </div>
                             </div>
                         </a>
@@ -124,260 +93,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-2.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Customer</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">Why communities help you build better products for your business</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
+        @endforeach
 
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/1.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Veronica P. Byrd</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-3.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Development</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">Why communities help you build better products</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/3.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Martin Gilbert</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-4.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Marketing</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">The role of product ops in successful distributed teams</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/4.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Raymond H. Martin</h6>
-                                    <span class="small fw-medium text-muted">May 4, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-5.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">UI/UX</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">The modern product manager’s tech stack</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/5.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Luthar Martin</h6>
-                                    <span class="small fw-medium text-muted">Jan 24, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-6.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Management</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">30 product management thought leaders to follow</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/6.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Donna Martin</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2022</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-7.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">Design</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">New analyst report: Digital product management tools and tech</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/1.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Donna R. Book</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-8.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-primary-soft">Development</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">A frank discussion about diversity, inclusion, and allyship</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/3.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Donna R. Martin</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-article rounded-custom my-3">
-                    <a href="blog-single.html" class="article-img">
-                        <img src="assets/img/blog/blog-9.jpg" alt="article" class="img-fluid">
-                    </a>
-                    <div class="article-content p-4">
-                        <div class="article-category mb-4 d-block">
-                            <a href="javascript:;" class="d-inline-block text-dark badge bg-warning-soft">Design</a>
-                        </div>
-                        <a href="blog-single.html">
-                            <h2 class="h5 article-title limit-2-line-text">4 steps for measuring the impact of product discovery</h2>
-                        </a>
-                        <p class="limit-2-line-text">Society is fragmenting into two parallel realities. In one reality, you have infinite upside and opportunity. In the other reality, you’ll continue to see the gap between your standard of living and those at the top grow more and more.</p>
-
-                        <a href="javascript:;">
-                            <div class="d-flex align-items-center pt-4">
-                                <div class="avatar">
-                                    <img src="assets/img/testimonial/2.jpg" alt="avatar" width="40" class="img-fluid rounded-circle me-3">
-                                </div>
-                                <div class="avatar-info">
-                                    <h6 class="mb-0 avatar-name">Martin Luthar</h6>
-                                    <span class="small fw-medium text-muted">April 24, 2021</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+        
         </div>
         <!--pagination start-->
+        @if($blogs->hasPages())
         <div class="row justify-content-center align-items-center mt-5">
             <div class="col-auto my-1">
-                <a href="#" class="btn btn-soft-primary btn-sm">Previous</a>
+                <a href="{{$blogs->previousPageUrl()}}" class="btn btn-soft-primary btn-sm">Previous</a>
             </div>
             <div class="col-auto my-1">
                 <nav>
                     <ul class="pagination rounded mb-0">
-                        <li class="page-item"><a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a>
-                        </li>
+                        @for($i = 1; $i <= $blogs->lastPage(); $i++)
+                            <li class="page-item  @if($blogs->currentPage() == $i) active @endif">
+                                <a class="page-link" href="{{$blogs->url($i)}}">{{$i}}</a>
+                            </li>
+                        @endfor
                     </ul>
                 </nav>
             </div>
             <div class="col-auto my-1">
-                <a href="#" class="btn btn-soft-primary btn-sm">Next</a>
+
+                <a href="{{$blogs->nextPageUrl()}}" class="btn btn-soft-primary btn-sm 
+                @if(!$blogs->hasMorePages()) disabled @endif ">Next</a>
             </div>
         </div>
+        @endif
         <!--pagination end-->
     </div>
 </section>

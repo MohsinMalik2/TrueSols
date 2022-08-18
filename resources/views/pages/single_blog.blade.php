@@ -1,5 +1,35 @@
 @extends('layouts.app')
+@section('page-meta')
 
+       
+        
+
+        <!--meta-->
+        <title>{{$blog->title}}</title>
+
+        <meta name="description" content="{{$blog->overview}}"/>
+        <meta name="author" content="{{$blog->user->name}}">
+        
+        <!--twitter og-->
+        <meta name="twitter:site" content="{{route('blog-detail', $blog->id)}}">
+        <meta name="twitter:creator" content="{{$blog->user ->name}}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{$blog->title}}">
+        <meta name="twitter:description" content="{{$blog->overview}}">
+        <meta name="twitter:image" content="{{asset('storage/blog-images/'.$blog->thumbnail)}}">
+
+        <!--facebook og-->
+        <meta property="og:url" content="{{route('blog-detail', $blog->id)}}">
+        <meta name="twitter:title" content="{{$blog->title}}">
+        <meta property="og:description" content="{{$blog->overview}}">
+        <meta property="og:image" content="{{asset('storage/blog-images/'.$blog->thumbnail)}}">
+        <meta property="og:image:type" content="image">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="600">
+
+       
+
+@endsection
 @section('content')
  <!--page header section start-->
  <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('assets/img/page-header-bg.svg')no-repeat bottom left">
@@ -71,7 +101,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="author-wrap text-center bg-light p-5 sticky-sidebar rounded-custom mt-5 mt-lg-0">
-                            <img src="{{asset('storage/profile-images/'.$blog->user->image)}}" alt="author" width="120" class="img-fluid shadow-sm rounded-circle">
+                            <img src="{{asset('storage/profile-images/'.$blog->user->image)}}" alt="{{$blog->user->name}}" width="120" class="img-fluid shadow-sm rounded-circle">
                             <div class="author-info my-4">
                                 <h5 class="mb-0">{{$blog->user->name}}</h5>
                                 <span class="small">{{$blog->user->tagline}}</span>

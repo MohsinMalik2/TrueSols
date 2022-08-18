@@ -1,5 +1,30 @@
 @extends('layouts.app')
+@section('page-meta')
+        <!--twitter og-->
+        <meta name="twitter:site" content="@buggbear">
+        <meta name="twitter:creator" content="@buggbear">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Buggbear - Art of Creation">
+        <meta name="twitter:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="twitter:image" content="{{asset('assets/img/social-banner.png')}}">
 
+        <!--facebook og-->
+        <meta property="og:url" content="#">
+        <meta name="twitter:title" content="Buggbear - Art of Creation">
+        <meta property="og:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta property="og:image" content="{{asset('assets/img/fb-trusols-banner.png')}}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="600">
+
+        <!--meta-->
+        <meta name="description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="author" content="Mohsin Nawaz">
+
+        <!--title-->
+        <title>Buggbear - Art of Creation</title>
+
+@endsection
 @section('content')
 
         <!--hero section start-->
@@ -944,7 +969,7 @@
                         <div class="col-lg-4 col-md-6 my-2">
                             <div class="single-article rounded-custom mb-4 mb-lg-0">
                                 <a href="{{route('blog-detail', $blog->id)}}" class="article-img">
-                                    <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="article" class="img-fluid">
+                                    <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="{{$blog->title}}" class="img-fluid">
                                 </a>
                                 <div class="article-content p-4">
                                     <div class="article-category mb-4 d-block">
@@ -968,7 +993,7 @@
                                     <a href="javascript:;">
                                         <div class="d-flex align-items-center pt-4">
                                             <div class="avatar">
-                                                <img src="{{asset('assets/img/testimonial/6.jpg')}}" alt="avatar" 
+                                                <img src="{{asset('storage/profile-images/'.$blog->user->image)}}" alt="{{$blog->user->name}}" 
                                                 width="40" class="img-fluid rounded-circle me-3">
                                             </div>
                                             <div class="avatar-info">

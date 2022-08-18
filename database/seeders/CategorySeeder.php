@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 
-class PortfolioCategorySeeder extends Seeder
+class CategorySeeder extends Seeder
 {
  
     /**
@@ -41,7 +41,7 @@ class PortfolioCategorySeeder extends Seeder
 
         foreach ($data as $category) {
             // dd($category['name']);
-            DB::table('portfolio_categories')->insert([
+            DB::table('categories')->insert([
                 'name' => $category['name'],
                 'created_by' => $category['created_by']
             ]);

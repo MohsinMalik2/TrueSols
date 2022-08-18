@@ -1,5 +1,30 @@
 @extends('layouts.app')
+@section('page-meta')
+        <!--twitter og-->
+        <meta name="twitter:site" content="www.buggbear.com/services">
+        <meta name="twitter:creator" content="Mohsin Nawaz">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Our Services - Buggbear - Art of Creation">
+        <meta name="twitter:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="twitter:image" content="{{asset('assets/img/social-banner.png')}}">
 
+        <!--facebook og-->
+        <meta property="og:url" content="www.buggbear.com/services">
+        <meta name="twitter:title" content="Our Services - Buggbear - Art of Creation">
+        <meta property="og:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta property="og:image" content="{{asset('assets/img/fb-trusols-banner.png')}}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="600">
+
+        <!--meta-->
+        <meta name="description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="author" content="Mohsin Nawaz">
+
+        <!--title-->
+        <title>Our Services - Buggbear</title>
+
+@endsection
 @section('content')
 <!--page header section start-->
 <section class="page-header position-relative overflow-hidden ptb-120 bg-dark" style="background: url('assets/img/page-header-bg.svg') no-repeat bottom left">
@@ -104,147 +129,6 @@
 </section>
 <!--features grid section end-->
 
-<!--testimonial section start-->
-<section class="testimonial-section ptb-120">
-    <div class="container">
-        <div class="row justify-content-center align-content-center">
-            <div class="col-md-10 col-lg-6">
-                <div class="section-heading text-center">
-                    <h4 class="h5 text-primary">Testimonial</h4>
-                    <h2>What They Say About Us</h2>
-                    <p>We are what our clients describe. Client's satisfaction is our first priority, right suggestions come next.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="position-relative w-100">
-                    <div class="swiper-container testimonialSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
-                                <img src="assets/img/testimonial/quotes-dot.svg" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
-                                <div class="d-flex mb-32 align-items-center">
-                                    <img src="assets/img/testimonial/1.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
-                                    <div class="author-info">
-                                        <h6 class="mb-0">Muhammad Kashif</h6>
-                                        <small>Reg. Manager Mylive-Tech Pakistan</small>
-                                    </div>
-                                </div>
-                                <blockquote>
-                                    <h6>The Best Team One Can Hire Remotely!</h6>
-                                    Remote work is kinda challenging but the team with right knowledge and collaboration skills,
-                                    ace in that field. 100% recommended.
-                                </blockquote>
-                                <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                </ul>
-                                <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
-                            </div>
-                            <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
-                                <img src="assets/img/testimonial/quotes-dot.svg" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
-                                <div class="d-flex mb-32 align-items-center">
-                                    <img src="assets/img/testimonial/3.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
-                                    <div class="author-info">
-                                        <h6 class="mb-0">Muhammad Hamza</h6>
-                                        <small>IoT Research Officer, Australia</small>
-                                    </div>
-                                </div>
-                                <blockquote>
-                                    <h6>Highly Co-operative Agency.</h6>
-                                    Thank you very much for doing everything in such a short notice,
-                                    I doubted someone will be able to make it with blured specifications I had, but you did it
-                                    better than my expectations.
-                                </blockquote>
-                                <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                </ul>
-                                <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
-                            </div>
-                            <!-- <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
-                                <img src="assets/img/testimonial/quotes-dot.svg" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
-                                <div class="d-flex mb-32 align-items-center">
-                                    <img src="assets/img/testimonial/2.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
-                                    <div class="author-info">
-                                        <h6 class="mb-0">Mr.Rupan Oberoi</h6>
-                                        <small>Founder and CEO</small>
-                                    </div>
-                                </div>
-                                <blockquote>
-                                    <h6>Amazing Quiety template!</h6>
-                                    Appropriately negotiate interactive niches rather than parallel strategic theme
-                                    incubate premium total linkage areas.
-                                </blockquote>
-                                <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                </ul>
-                                <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
-                            </div>
-                            <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
-                                <img src="assets/img/testimonial/quotes-dot.svg" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
-                                <div class="d-flex mb-32 align-items-center">
-                                    <img src="assets/img/testimonial/4.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
-                                    <div class="author-info">
-                                        <h6 class="mb-0">Joan Dho</h6>
-                                        <small>Founder and CTO</small>
-                                    </div>
-                                </div>
-                                <blockquote>
-                                    <h6>Best Template for SAAS Company!</h6>
-                                    Dynamically create innovative core competencies with effective best
-                                    practices promote innovative infrastructures.
-                                </blockquote>
-                                <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                </ul>
-                                <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
-                            </div>
-                            <div class="swiper-slide border border-2 p-5 rounded-custom position-relative">
-                                <img src="assets/img/testimonial/quotes-dot.svg" alt="quotes" width="100" class="img-fluid position-absolute left-0 top-0 z--1 p-3">
-                                <div class="d-flex mb-32 align-items-center">
-                                    <img src="assets/img/testimonial/5.jpg" class="img-fluid me-3 rounded" width="60" alt="user">
-                                    <div class="author-info">
-                                        <h6 class="mb-0">Ranu Mondal</h6>
-                                        <small>Lead Developer</small>
-                                    </div>
-                                </div>
-                                <blockquote>
-                                    <h6>It is undeniably good!</h6>
-                                    Rapidiously supply client-centric e-markets and maintainable processes
-                                    progressively engineer
-                                </blockquote>
-                                <ul class="review-rate mb-0 mt-2 list-unstyled list-inline">
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                    <li class="list-inline-item"><i class="fas fa-star text-warning"></i></li>
-                                </ul>
-                                <img src="assets/img/testimonial/quotes.svg" alt="quotes" class="position-absolute right-0 bottom-0 z--1 pe-4 pb-4">
-                            </div> -->
-                        </div>
-                    </div>
-                    <span class="swiper-button-next"></span>
-                    <span class="swiper-button-prev"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--testimonial section end-->
+@include('pages.partials.testimonials')
+
 @endsection
