@@ -194,4 +194,6 @@
         @include('pages.partials.team')
 
       @include('pages.partials.testimonials')
+
+      @include('pages.partials.certification')
 @endsection
