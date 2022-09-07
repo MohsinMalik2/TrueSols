@@ -57,14 +57,14 @@
         @foreach($blogs as $blog)
             <div class="col-lg-4 col-md-6">
                 <div class="single-article rounded-custom my-3">
-                    <a href="{{route('blog-detail', $blog->id)}}" class="article-img">
+                    <a href="{{route('blog-detail', $blog->slug)}}" class="article-img">
                         <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" alt="{{$blog->title}}" class="img-fluid">
                     </a>
                     <div class="article-content p-4">
                         <div class="article-category mb-4 d-block">
                             <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">{{$blog->category}}</a>
                         </div>
-                        <a href="{{route('blog-detail', $blog->id)}}">
+                        <a href="{{route('blog-detail', $blog->slug)}}">
                             <h2 class="h5 article-title limit-2-line-text">{{$blog->title}}</h2>
                         </a>
                         <p class="limit-2-line-text">{{$blog->overview}}</p>

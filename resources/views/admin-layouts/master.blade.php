@@ -3,14 +3,40 @@
 <!-- BEGIN: Head-->
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>Dashboard ecommerce - Vuexy - Bootstrap HTML admin template</title>
+      <!--twitter og-->
+      <meta name="twitter:site" content="@buggbear">
+        <meta name="twitter:creator" content="@buggbear">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Buggbear - Art of Creation">
+        <meta name="twitter:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="twitter:image" content="{{asset('assets/img/social-banner.png')}}">
+
+        <!--facebook og-->
+        <meta property="og:url" content="#">
+        <meta name="twitter:title" content="Buggbear - Art of Creation">
+        <meta property="og:description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta property="og:image" content="{{asset('assets/img/fb-trusols-banner.png')}}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="600">
+
+        <!--meta-->
+        <meta name="description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
+        <meta name="author" content="Mohsin Nawaz">
+
+        <!--title-->
+        <title>Dashboard - Buggbear Admin</title>
+
+        <!--favicon icon-->
+        <link rel="icon" href="{{asset('assets/img/favico/favicon.ico')}}" type="image/x-icon" >
+
+        <link rel="apple-touch-icon" sizes="57×57" href="{{asset('assets/img/favico/apple-touch-icon.png')}}" type="image/png">
+        <link rel="apple-touch-icon" sizes="72×72"  href="{{asset('assets/img/favico/apple-touch-icon.png')}}" type="image/png">
+        <link rel="apple-touch-icon" sizes="114×114"  href="{{asset('assets/img/favico/apple-touch-icon.png')}}" type="image/png">
+        <link rel="apple-touch-icon" sizes="144×144"  href="{{asset('assets/img/favico/apple-touch-icon.png')}}" type="image/png">
+
+        <link rel="icon" type="image/png" href="{{asset('assets/img/favico/android-chrome-512x512.png')}}" sizes=512x512>
+        <link rel="icon" type="image/png" href="{{asset('assets/img/favico/android-chrome-192x192.png')}}" sizes=192x192>
 
 
      <!-- BEGIN: Vendor CSS-->

@@ -43,12 +43,12 @@ class HomeController extends Controller
         return view('pages.blogs',compact('blogs','categories'));
     }
     
-    public function blog_detail($id)
+    public function blog_detail($slug)
     {
         
-        $blog = Blog::where('id',$id)->first();
+        $blog = Blog::where('slug',$slug)->first();
         $user_id = $blog->user_id;
-        $blogList = Blog::where('user_id',$user_id)->where('id','!=',$id)->get();
+        $blogList = Blog::where('user_id',$user_id)->where('slug','!=',$slug)->get();
         return view('pages.single_blog', compact('blog','blogList'));
     }
 

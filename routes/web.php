@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
-Route::get('/blog/{id}', [HomeController::class, 'blog_detail'])->name('blog-detail');
+Route::get('/blog/{slug}', [HomeController::class, 'blog_detail'])->name('blog-detail');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
 Route::get('/request-demo', [HomeController::class, 'requestDemo'])->name('request-demo');
@@ -40,36 +40,26 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+
         Route::get('/home', [AdminController::class, 'index'])->name('home');
         Route::get('/portfolio', [AdminController::class, 'portfolio'])->name('portfolio');
         Route::POST('/portfolio-form', [AdminController::class, 'portfolio_form'])->name('portfolio-form');
 
 
         /* Blog Routes */
-        Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
-
-      
-
-
-        /* Blog CRUD Routes */
-
-        Route::get('/blog-new', [AdminController::class, 'blog_new'])->name('blog-new');
-        Route::get('/blog-edit-form/{id}', [AdminController::class, 'blog_edit_form'])->name('blog_edit_form');
-        Route::post('/blog_save', [AdminController::class, 'blog_save'])->name('blog_save');
-        Route::post('/blog_edit', [AdminController::class, 'blog_edit'])->name('blog_edit');
-        Route::get('/blog-delete/{id}', [AdminController::class, 'blog_delete'])->name('blog_delete');
-
-        /* Blog CRUD Routes */
-
-
-
+            Route::get('/blog', [AdminController::class, 'blog'])->name('blog');
+                /* Blog CRUD Routes */
+                Route::get('/blog-new', [AdminController::class, 'blog_new'])->name('blog-new');
+                Route::get('/blog-edit-form/{id}', [AdminController::class, 'blog_edit_form'])->name('blog_edit_form');
+                Route::post('/blog_save', [AdminController::class, 'blog_save'])->name('blog_save');
+                Route::post('/blog_edit', [AdminController::class, 'blog_edit'])->name('blog_edit');
+                Route::get('/blog-delete/{id}', [AdminController::class, 'blog_delete'])->name('blog_delete');
+                /* Blog CRUD Routes */
         /* Blog Routes */
 
         /*Setting Routes */
             Route::get('/settings', [ProfileController::class, 'index'])->name('settings');
             Route::POST('/setting-form', [ProfileController::class, 'form_submit'])->name('setting-form');
-
-
         /*Setting Routes */
 
         

@@ -8,7 +8,7 @@
                 <div class="col-xl-4 col-md-6 col-12">
                     <div class="card card-congratulation-medal">
                         <div class="card-body">
-                            <h5>Congratulations 🎉 John!</h5>
+                            <h5>Congratulations 🎉 {{$user->name}}</h5>
                             <p class="card-text font-small-3">You have won gold medal</p>
                             <h3 class="mb-75 mt-2 pt-50">
                                 <a href="#">$48.9k</a>
@@ -26,7 +26,7 @@
                         <div class="card-header">
                             <h4 class="card-title">Statistics</h4>
                             <div class="d-flex align-items-center">
-                                <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
+                                <p class="card-text font-small-2 me-25 mb-0">Updated Now</p>
                             </div>
                         </div>
                         <div class="card-body statistics-body">
@@ -39,8 +39,8 @@
                                             </div>
                                         </div>
                                         <div class="my-auto">
-                                            <h4 class="fw-bolder mb-0">230k</h4>
-                                            <p class="card-text font-small-3 mb-0">Sales</p>
+                                            <h4 class="fw-bolder mb-0">{{count($blogList)}}</h4>
+                                            <p class="card-text font-small-3 mb-0">Blogs</p>
                                         </div>
                                     </div>
                                 </div>
@@ -52,8 +52,8 @@
                                             </div>
                                         </div>
                                         <div class="my-auto">
-                                            <h4 class="fw-bolder mb-0">8.549k</h4>
-                                            <p class="card-text font-small-3 mb-0">Customers</p>
+                                            <h4 class="fw-bolder mb-0">{{count($portfolioList)}}</h4>
+                                            <p class="card-text font-small-3 mb-0">Portfolio Products</p>
                                         </div>
                                     </div>
                                 </div>
@@ -65,12 +65,12 @@
                                             </div>
                                         </div>
                                         <div class="my-auto">
-                                            <h4 class="fw-bolder mb-0">1.423k</h4>
-                                            <p class="card-text font-small-3 mb-0">Products</p>
+                                            <h4 class="fw-bolder mb-0">{{count($categories)}}</h4>
+                                            <p class="card-text font-small-3 mb-0">Portfolio Categories</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-3 col-sm-6 col-12">
+                                <!-- <div class="col-xl-3 col-sm-6 col-12">
                                     <div class="d-flex flex-row">
                                         <div class="avatar bg-light-success me-2">
                                             <div class="avatar-content">
@@ -82,7 +82,7 @@
                                             <p class="card-text font-small-3 mb-0">Revenue</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

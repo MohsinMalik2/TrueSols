@@ -31,7 +31,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $categories = DB::table('categories')->get();
+        $user = Auth::user();
+        $portfolioList = Portfolio::all();
+        $blogList = Blog::all()->where('deleted','=',0)->where('created_by','=',$user->id);
+        return view('admin.home',compact('categories','portfolioList','user','blogList'));
     }
 
     /* Portfolio Functions */
