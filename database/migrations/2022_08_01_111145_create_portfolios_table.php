@@ -21,6 +21,7 @@ class CreatePortfoliosTable extends Migration
             $table->string('category')->nullable();
             $table->string('is_active')->default('off');
             $table->string('thumbnail')->nullable();
+            $table->tinyInteger('deleted')->nullable();
             $table->timestamps();
         });
     }

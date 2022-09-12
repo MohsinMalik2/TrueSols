@@ -30,7 +30,7 @@
         <!--custom css start-->
         <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
         <!--custom css end-->
-
+        @stack('style')
     </head>
     <body>
         <!--preloader start-->

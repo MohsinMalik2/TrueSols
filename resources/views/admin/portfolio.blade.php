@@ -48,7 +48,7 @@
                                                 <td class="text-truncate" style="max-width:70px;">{{$portfolio->created_at}}</td>
                                                 <td class="text-truncate" style="max-width:70px;">{{$portfolio->updated_at}}</td>
                                                 <td >
-                                                    <a onclick="deletePortfolio('{{$portfolio->id}}')" class="item-delete">
+                                                    <a href="portfolio-delete/{{$portfolio->id}}" class="item-delete">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 font-small-4 me-50">
                                                             <polyline points="3 6 5 6 21 6"></polyline>
                                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -89,7 +89,7 @@
             <div class="modal-body">
                 <form method="POST" action="{{ route('admin.portfolio-form') }}" enctype="multipart/form-data">
                     @csrf
-                    <input type="hidden" id="uuid">
+                    <input type="hidden" id="uuid" name="uuid">
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6">
@@ -107,7 +107,7 @@
                             <div class="col-md-6">
                                 <label>Tags </label>
                                 <div class="mb-1">
-                                    <select class="select2 form-select" multiple="multiple" id="default-select-multi" id="tags" name="tags[]">
+                                    <select class="select2 form-select" multiple="multiple" id="tags" name="tags[]">
                                         <option value="square">Square</option>
                                         <option value="rectangle">Rectangle</option>
                                         <option value="rombo">Rombo</option>
@@ -164,14 +164,35 @@
 
 
 <script>
+
+    var tags = $("#tags");
     $(document).ready(function() {
+        //Tags Select2 Select
+        tags.each(function() {
+            var $this = $(this);
+            $this.wrap('<div class="position-relative"></div>');
+            $this.select2({
+                // the following code is used to disable x-scrollbar when click in select input and
+                // take 100% width in responsive also
+                dropdownAutoWidth: true,
+                tags: true,
+                width: '100%',
+                dropdownParent: $this.parent()
+            });
+        });
 
     });
-    editPortfolio('1','Amazone','1660737077.jpg','3','333.com','on')
     function editPortfolio(id,name,thumbnail,category,url,is_active){
-        $("uuid").val(id);
+
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(thumbnail);//your file(s) reference(s)
+        document.getElementById('thumbnail').files = dataTransfer.files;
+
+        alert($("#thumbnail").val());
+        $("#uuid").val(id);
         $("#name").val(name);
         $("#thumbnail").attr('placeholder', thumbnail);
+        
         $("#category").val(category);
         $("#url").val(url);
         if(is_active == "on"){

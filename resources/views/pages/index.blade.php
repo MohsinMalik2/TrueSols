@@ -273,27 +273,27 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-8 col-md-12">
                         <div class="tab-button mb-5">
                             <ul class="nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="pills-web-tab" data-bs-toggle="pill" data-bs-target="#pills-web" type="button" role="tab" aria-controls="pills-web" aria-selected="true">
-                                        Web
+                                        Website Development
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="pills-branding-tab" data-bs-toggle="pill" data-bs-target="#pills-branding" type="button" role="tab" aria-controls="pills-branding" aria-selected="false">
-                                        Branding
+                                        Brand Development
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="pills-design-tab" data-bs-toggle="pill" data-bs-target="#pills-design" type="button" role="tab" aria-controls="pills-design" aria-selected="false">
-                                        Design
+                                        UX / UI Design
                                     </button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="pills-logo-tab" data-bs-toggle="pill" data-bs-target="#pills-logo" type="button" role="tab" aria-controls="pills-logo" aria-selected="false">
-                                        Logo
+                                        Logo / Graphic Design
                                     </button>
                                 </li>
                             </ul>
