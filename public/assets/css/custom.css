@@ -11,3 +11,6 @@
 .nav-link span{
     padding: 5px 10px;
 }
+a.nav-link.active{
+    color: #0D79BA !important;
+}

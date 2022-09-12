@@ -20,6 +20,8 @@
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="600">
 
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <!--meta-->
         <meta name="description" content="Buggbear - Art of Creation provides IT solutions & Development services including Web Development, Web Design, CRM, POS, HRM, Graphic Designing, Content Writing, Automated & Mannual Quality Assurance, SEO and UI/UX Design.">
         <meta name="author" content="Mohsin Nawaz">

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('about_us','active')
 @section('page-meta')
         <!--twitter og-->
         <meta name="twitter:site" content="www.buggbear.com/about-us">

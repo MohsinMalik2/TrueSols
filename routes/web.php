@@ -33,6 +33,7 @@ Route::get('/coming-soon', [HomeController::class, 'comingSoon'])->name('coming-
 Route::get('/request-demo', [HomeController::class, 'requestDemo'])->name('request-demo');
 Route::get('/single-blog', [HomeController::class, 'singleBlog'])->name('single-blog');
 Route::get('/single-portfolio', [HomeController::class, 'singlePortfolio'])->name('single-portfolio');
+Route::get('/portfolio/{slug}', [HomeController::class, 'portfolio_detail'])->name('portfolio-detail');
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 
 Auth::routes();

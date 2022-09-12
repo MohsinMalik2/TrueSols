@@ -106,22 +106,19 @@
                                 <p>Already trusted by some of the greatest companies</p>
                                 <ul class="list-unstyled list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <img src="assets/img/clients/client-logo-1.svg" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
+                                        <img src="{{asset('assets/img/brand-logo/1-2.png')}}" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img src="assets/img/clients/client-logo-2.svg" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
+                                        <img src="{{asset('assets/img/brand-logo/2-1.png')}}" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img src="assets/img/clients/client-logo-3.svg" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
+                                        <img src="{{asset('assets/img/brand-logo/3-1.png')}}" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img src="assets/img/clients/client-logo-4.svg" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
+                                        <img src="{{asset('assets/img/brand-logo/corium.png')}}" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
                                     </li>
                                     <li class="list-inline-item">
-                                        <img src="assets/img/clients/client-logo-5.svg" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img src="assets/img/clients/client-logo-6.svg" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
+                                        <img src="{{asset('assets/img/brand-logo/indoor-air-quality.png')}}" width="120" alt="clients logo" class="img-fluid py-3 me-3 customer-logo">
                                     </li>
                                 </ul>
                             </div>
@@ -175,7 +172,7 @@
                                         <input  id="password-confirm" type="password" class="form-control" placeholder="Password" name="password_confirmation" required autocomplete="new-password">
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <div class="form-check d-flex">
                                         <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckChecked">
                                         <label class="form-check-label" for="flexCheckChecked">
@@ -183,7 +180,7 @@
                                                 & Conditions</a>
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary mt-4 d-block w-100">Submit</button>
                                 </div>
@@ -192,14 +189,14 @@
                                 <span class="divider-bar"></span>
                                 <h6 class="position-absolute text-center divider-text bg-light mb-0">Or</h6>
                             </div>
-                            <div class="action-btns">
+                            <!-- <div class="action-btns">
                                 <a href="#" class="btn google-btn mt-4 d-block bg-white shadow-sm d-flex align-items-center text-decoration-none justify-content-center">
                                     <img src="assets/img/google-icon.svg" alt="google" class="me-3">
                                     <span>Sign up with Google</span>
                                 </a>
-                            </div>
+                            </div> -->
                             <p class="text-center text-muted mt-4 mb-0 fw-medium font-monospace">Already have an
-                                account? <a href="login.html" class="text-decoration-none">Sign in</a></p>
+                                account? <a href="{{ route('login') }}" class="text-decoration-none">Sign in</a></p>
                         </form>
                     </div>
                 </div>

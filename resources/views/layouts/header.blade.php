@@ -18,19 +18,19 @@
                   <div class="collapse navbar-collapse justify-content-center">
                       <ul class="nav col-12 col-md-auto justify-content-center main-menu">
                           <li class="">
-                              <a class="nav-link active" href="{{route('index')}}" role="button">
+                              <a class="nav-link @yield('home')" href="{{route('index')}}" role="button">
                                   Home
                               </a>
                           </li>
-                          <li><a href="{{ route('services') }}" class="nav-link">Services</a></li>
+                          <li><a href="{{ route('services') }}" class="nav-link @yield('services')">Services</a></li>
 
-                          <li><a href="{{route('blogs')}}" class="nav-link">Blogs</a></li>
+                          <li><a href="{{route('blogs')}}" class="nav-link @yield('blogs')">Blogs</a></li>
 
-                          <li><a href="{{route('portfolio')}}" class="nav-link">Portfolio</a></li>
+                          <li><a href="{{route('portfolio')}}" class="nav-link @yield('portfolio')">Portfolio</a></li>
 
-                          <li><a href="{{route('about-us')}}" class="nav-link">About Us</a></li>
+                          <li><a href="{{route('about-us')}}" class="nav-link @yield('about_us')">About Us</a></li>
 
-                          <li><a href="{{route('contact-us')}}" class="nav-link">Contact Us</a></li>
+                          <li><a href="{{route('contact-us')}}" class="nav-link @yield('contact_us')">Contact Us</a></li>
                           <!-- @guest
                             @if (Route::has('login'))
                                 <li>

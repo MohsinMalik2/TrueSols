@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('portfolio','active')
 @section('content')
 <!-- Page Header Start-->
 <!--page header section start-->
@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-12 text-center">
-                <h1 class="display-5 fw-bold">Leafery Branding</h1>
+                <h1 class="display-5 fw-bold">Leafery Branding  </h1>
                 <ul class="list-unstyled d-flex justify-content-center">
                     <li class="pe-1">
                         <a href="#" class="text-decoration-none text-white">Home/ </a>

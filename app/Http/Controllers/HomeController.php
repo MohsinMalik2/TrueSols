@@ -81,6 +81,15 @@ class HomeController extends Controller
         return view('pages.portfolio',compact('portfolioList'));
     }
 
+    public function portfolio_detail($slug)
+    {
+        
+        $portfolio = Blog::where('slug',$slug)->first();
+        $user_id = $portfolio->user_id;
+        return view('pages.single_portfolio', compact('portfolio','user_id'));
+    }
+
+
     public function singlePortfolio(){
         return view('pages.single_portfolio');
     }
