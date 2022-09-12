@@ -43,7 +43,7 @@ class AdminController extends Controller
     public function portfolio()
     {
         $categories = DB::table('categories')->get();
-        $portfolioList = Portfolio::all();
+        $portfolioList = Portfolio::all()->where('deleted','!=',1);
 
         return view('admin.portfolio',compact('categories','portfolioList'));
     }
@@ -63,22 +63,41 @@ class AdminController extends Controller
             
             $fileName = $this->imageUpload($request);
         }
-
-        // return $fileName;
-        Portfolio::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'tags' => $tagString,
-            'url' => $request->url,
-            'category' => $request->category,
-            'thumbnail' => $fileName,
-            'is_active' => $is_active,
-        ]);
+        if($request->uuid){
+            // return $fileName;
+            Portfolio::where('id',$request->uuid)->update([
+                'name' => $request->name,
+                'tags' => $tagString,
+                'url' => $request->url,
+                'category' => $request->category,
+                'thumbnail' => $fileName,
+                'is_active' => $is_active,
+            ]);
+        }
+        else{
+            // return $fileName;
+            Portfolio::create([
+                'name' => $request->name,
+                'tags' => $tagString,
+                'url' => $request->url,
+                'category' => $request->category,
+                'thumbnail' => $fileName,
+                'is_active' => $is_active,
+            ]);
+        }
+       
         
         return redirect()->route('admin.portfolio');
 
     }
 
+    public function portfolio_delete($id)
+    {
+        $portfolio=Portfolio::firstWhere('id',$id);
+        $portfolio->deleted=1;
+        $portfolio->save();
+        return redirect()->route('admin.portfolio');
+    }
     /* Portfolio Functions */
 
     
@@ -87,7 +106,7 @@ class AdminController extends Controller
 
     public function blog()
     {
-        $blogList = Blog::all()->where('deleted','=',0);
+        $blogList = Blog::all()->where('deleted','!=',1);
         return view('admin.blog', compact('blogList'));
     }
 

@@ -44,6 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/home', [AdminController::class, 'index'])->name('home');
         Route::get('/portfolio', [AdminController::class, 'portfolio'])->name('portfolio');
         Route::POST('/portfolio-form', [AdminController::class, 'portfolio_form'])->name('portfolio-form');
+        Route::post('/portfolio-edit', [AdminController::class, 'portfolio_edit'])->name('portfolio_edit');
+        Route::get('/portfolio-delete/{id}', [AdminController::class, 'portfolio_delete'])->name('portfolio_delete');
 
 
         /* Blog Routes */

@@ -22,19 +22,19 @@ class CategorySeeder extends Seeder
 
         $data = [
             [
-                'name' => 'Web',
+                'name' => 'Website Development',
                 'created_by' => $id,
             ],
             [
-                'name' => 'Branding',
+                'name' => 'Brand Development',
                 'created_by' => $id,
             ],
             [
-                'name' => 'Design',
+                'name' => 'UX / UI Design',
                 'created_by' => $id,
             ],
             [
-                'name' => 'Logo',
+                'name' => 'Logo / Graphic Design',
                 'created_by' => $id,
             ]
         ];
