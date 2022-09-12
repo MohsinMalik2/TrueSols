@@ -34,13 +34,13 @@
                                                 @foreach($blogList as $blog)
                                                     <tr>
                                                         <td>{{$blog->title}}</td>
-                                                        <td>{{$blog->category}}</td>
+                                                        <td>{{$blog->categoryList->name}}</td>
                                                         <td>{{$blog->slug}}</td>
                                                         <td>{{$blog->thumbnail}}</td>
                                                         <td>{{$blog->created_at}}</td>
-                                                        <td>{{$blog->created_by}}</td>
+                                                        <td>{{$blog->user->name}}</td>
                                                         <td>{{$blog->updated_at}}</td>
-                                                        <td>{{$blog->updated_by}}</td>
+                                                        <td>{{$blog->user->name}}</td>
                                                         <td >        
                                                             <a href="blog-delete/{{$blog->id}}" class="delete-record">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 font-small-4 me-50">

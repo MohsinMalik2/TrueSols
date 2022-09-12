@@ -38,7 +38,7 @@
                                             @foreach($portfolioList as $portfolio)
                                             <tr>
                                                 <td class="text-truncate" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="{{$portfolio->name}}" style="max-width:70px;">{{$portfolio->name}}</td>
-                                                <td class="text-truncate" style="max-width:70px;">{{$portfolio->category}}</td>
+                                                <td class="text-truncate" style="max-width:70px;">{{$portfolio->categoryList->name}}</td>
                                                 <td class="text-truncate" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="{{$portfolio->tags}}" style="max-width:70px;">{{$portfolio->tags}}</td>
                                                 <td class="text-truncate" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="{{$portfolio->url}}" style="max-width:70px;">{{$portfolio->url}}</td>
                                                 <td class="text-truncate" style="max-width:70px;">

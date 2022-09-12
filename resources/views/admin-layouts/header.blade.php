@@ -221,8 +221,8 @@
                             <i class="me-50" data-feather="power"></i> 
                             Logout
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                @csrf
+                            </form>
                         </a>        
                     </div>
                 </li>

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('blogs','active')
 @section('page-meta')
+
 <!--twitter og-->
 <meta name="twitter:site" content="www.buggbear.com/blogs">
 <meta name="twitter:creator" content="Mohsin Nawaz">
@@ -55,7 +56,7 @@
                     <ul class="nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class=" btn btn-soft-primary btn-pill btn-sm m-2 active" id="pills-web-tab" data-bs-toggle="pill" data-bs-target="#pills-web" type="button" role="tab" aria-controls="pills-web" aria-selected="true">
-                                Website Development
+                                Website Development 
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -100,7 +101,7 @@
                                     <div class="article-content p-4">
                                         <div class="article-category mb-4 d-block">
                                             <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">
-                                                Website Development
+                                                {{$blog->categoryList->name}}
                                             </a>
                                         </div>
                                         <a href="{{route('blog-detail', $blog->slug)}}">
@@ -131,6 +132,7 @@
                                     </div>
                                 </div>
                             </div>
+                                
                             @endif
                         @endforeach
                     </div>
@@ -150,7 +152,7 @@
                                     <div class="article-content p-4">
                                         <div class="article-category mb-4 d-block">
                                             <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">
-                                                Brand Development
+                                            {{$blog->categoryList->name}}
                                             </a>
                                         </div>
                                         <a href="{{route('blog-detail', $blog->slug)}}">
@@ -200,7 +202,7 @@
                                     <div class="article-content p-4">
                                         <div class="article-category mb-4 d-block">
                                             <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">
-                                            UX / UI Design
+                                                {{$blog->categoryList->name}}
                                             </a>
                                         </div>
                                         <a href="{{route('blog-detail', $blog->slug)}}">
@@ -249,7 +251,7 @@
                                         <div class="article-content p-4">
                                             <div class="article-category mb-4 d-block">
                                                 <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">
-                                                    Logo / Graphic Design
+                                                    {{$blog->categoryList->name}}
                                                 </a>
                                             </div>
                                             <a href="{{route('blog-detail', $blog->slug)}}">

@@ -32,9 +32,9 @@ class Blog extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function category()
+    public function categoryList()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class,'category');
     }
 
 }

@@ -13,7 +13,7 @@
         <div class="card-body">
           <div class="d-flex align-items-start">
             <div class="avatar me-75">
-              <img src="../../../app-assets/images/portrait/small/avatar-s-9.jpg" width="38" height="38" alt="Avatar" />
+              <img src="{{asset('storage/profile-images/'.$user->image)}}" width="38" height="38" alt="Avatar" />
             </div>
             <div class="author-info">
               <h6 class="mb-25">{{$user->name}}</h6>
@@ -300,6 +300,7 @@
         contentType: false,
         processData: false,
         success: function(response) {
+          console.log("response",response);
           if (response == 'saved') {
             swal({
               title: "Blog Saved!",
@@ -310,7 +311,7 @@
           } else {
             swal({
               title: "Error!",
-              text: "Blog Could NOT be upload please contact Admin!",
+              text: "Blog Could NoT be upload please contact Admin!",
               icon: "error",
               button: "OK",
             });

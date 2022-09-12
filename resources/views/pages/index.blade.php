@@ -974,7 +974,7 @@
                                 </a>
                                 <div class="article-content p-4">
                                     <div class="article-category mb-4 d-block">
-                                        <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">{{$blog->category}}</a>
+                                        <a href="javascript:;" class="d-inline-block text-dark badge bg-danger-soft">{{$blog->categoryList->name}}</a>
                                           
                                     </div>
                                     <a href="{{route('blog-detail', $blog->slug)}}">

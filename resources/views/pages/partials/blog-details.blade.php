@@ -1,5 +1,5 @@
 
-<div class="text-center">
+<div class="text-center mb-4">
     <img src="{{asset('storage/blog-images/'.$blog->thumbnail)}}" class="img-fluid rounded-custom" alt="{{$blog->title}}">
 </div>
 
@@ -8,7 +8,7 @@
 <div class="my-3 row">
     <div class="col-md-4">
         <p class="fw-bold">Category: 
-            <small class="fw-normal d-inline-block text-primary badge bg-primary-soft">{{$blog->category}}</small>
+            <small class="fw-normal d-inline-block text-primary badge bg-primary-soft">{{$blog->categoryList->name}}</small>
         </p>
     </div>
     <div class="col-md-8 text-end">
@@ -31,8 +31,6 @@
 @section('scripts')
 <script>
      $(document).ready(function(){
-        
-
         $('.blog-details-wrap').find('h1').addClass('fw-bold display-5');
         $('.blog-details-wrap').find('ul').addClass('content-list list-unstyled');
         $('.blog-details-wrap').find("blockquote").addClass('bg-white custom-shadow p-5 mt-5 rounded-custom border-4 border-primary border-top');

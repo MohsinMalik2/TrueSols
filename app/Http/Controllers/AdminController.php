@@ -153,10 +153,10 @@ class AdminController extends Controller
         $newblog->active=$request->active;
         if($newblog->save())
         {
-            echo 'saved';
+            return 'saved';
         }else
         {
-            echo 'failed';
+            return 'failed';
         }
     }
     public function blog_edit(Request $request)
